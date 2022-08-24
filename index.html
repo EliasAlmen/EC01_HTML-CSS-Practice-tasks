@@ -16,11 +16,9 @@
             <li>
                <a href="#">
                   <div class="dropdown">
-                  <button class="dropbtn">ENG</button>
+                  <button class="dropbtn">ENG<i id="arrow "class="fa-regular fa-angle-down"></i></button>
                   <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="#"><i class="fa-solid fa-person-digging"></i></a>
                   </div>
                </a>
             </li>
@@ -50,26 +48,24 @@
    </nav>
    <header class="header">
       <div class="container">
+         <div class="logotype">
+            <img src="Logo.svg" alt="Logotype">
+         </div>
          <ul class="header-nav">
             <li>
-               <img src="Logo.svg" alt="Logotype">
+               <a href="#" id="myaccount"><i id="nav-user" class="fa-regular fa-user"></i>My account</a>
             </li>
             <li>
-               <a href=""><i class="fa fa-user"></i> My account</a>
+               <a href="#"><i class="fa fa-heart"></i></a>
             </li>
             <li>
-               <a href=""><i class="fa fa-heart"></i></a>
+               <a href="#"><i class="fa fa-shuffle"></i></a>
             </li>
             <li>
-               <a href=""><i class="fa fa-shuffle"></i></a>
+               <a href="#"><i class="fa fa-cart-shopping"></i></a>
             </li>
             <li>
-               <a href=""><i class="fa fa-cart-shopping"></i></a>
-            </li>
-            <li>
-               <a href="">
-                  <p id="money">£9999.00</p>
-               </a>
+               <a href="#">€9999.00</a>
             </li>
          </ul>
       </div>
@@ -77,8 +73,15 @@
    <section class="section">
       <div class="container">
          <ul class="buttons">
-            <li><button>dropdown</button></li>   
-            <li><button>2</button></li>            
+            <li class="btn-section" id="btn-category">
+               <a href="#" class="btn-looks">
+                  <i class="fa-solid fa-bars" id="bars"></i>
+                  Browse Categories
+               </a>
+            </li>   
+            <li class="btn-section" id="btn-special">
+               <a href="#" class="btn-looks">SPECIAL OFFER</a>
+            </li>            
          </ul>
       </div>
    </section>
