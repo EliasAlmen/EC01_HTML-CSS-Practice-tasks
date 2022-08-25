@@ -11,178 +11,129 @@ body{
     font-family: 'Roboto';
     font-size: 16px;
     line-height: 1.5;
-    
 }
 
 ul{
     list-style-type: none;
 }
 
-.container{
-    max-width: 1110px;
-    margin: 0 auto;
-    padding: 0 5px;
+a{
+    text-decoration: none;
+    color: #ffffff;
 }
 
-.navbar{
+.navbar-custom{
     background: #20D3C2;
     height: 40px;
-    color: white;
 }
 
-.navbar a{
-    color: white;
-    text-decoration: none;
+.navbar-social-link:hover, .navbar-hover:hover{
+    color: #0E153D;
 }
 
-.navbar .container{
+.navbar-nav{
+    justify-content: start;
+    height: 40px;
+}
+
+/* LOGO AND ACCOUNT LINKS */
+.header-nav{
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-}
-
-.navbar ul{
-    display: flex;
-}
-
-.eng-eur{
-    margin-right: auto;
-}
-
-.eng-eur li{
-    margin-right: 20px;
-}
-
-.links li{
-    margin-right: 35px;
-}
-
-.social li{
-    margin-right: 10px;
-}
-
-/* Style The Dropdown Button */
-.dropbtn {
-    background-color: #20D3C2;
-    color: white;
-    /* padding: 16px; */
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #146b62;
-  }
-
-  .header .container{
-    display: flex;
+    height: 105px;
     justify-content: space-between;
     align-items: center;
-    height: 105px ;
-  }
+}
 
-  .header-nav{
+.header-logotype{
+    flex: 2.5;
+}
+
+.header-account{
     display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.header-user{
+    flex: 0.1;
+}
+
+    .header-user > a{
+        color: #0E153D;
+    }
+
+    .header-nav-hover-dark:hover{
+        color: #20D3C2;
+    }
+
+.fa-regular{
     margin-right: 10px;
-    align-items: center;
-  }
+}
 
-  .header-nav a{
-    color: #0E153D;
-    text-decoration: none;
-    margin-right: 20px;   
-  }
+#header-user-myaccount{
+    flex: 0.5;
+}
 
-  #myaccount{
-    margin-right: 50px;
-  }
-
-  #nav-user{
-    margin-right: 10px;
-  }
-
-  
 /* BROWSE OCH SPECIAL OFFER */
-  .section {
+.section {
     height: 52px;
     border-top: 1px solid rgba(211, 211, 211, 0.5);
     border-bottom: 1px solid rgba(211, 211, 211, 0.5);
-  }
+}
 
-  .buttons{
+.buttons-section{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
+    line-height: 50px;
+}
 
-.btn-section{
+.browse-categories{
+    display: flex;
+}
+
+.browse-link{
+    display: flex;
+    justify-content: left;
     background-color: #20D3C2;
-    line-height: 50px;
-    line-height: 50px;
-    text-align: center;
+    color: #ffffff;
+    width: 255px;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+    .browse-link:hover{
+        background-color: #0E153D;
     }
 
-.btn-looks{
-    color: #ffffff;
-    text-decoration: none;
-    align-items: center;
-    text-align: center;
+.browse-bars{
+    flex: 0;
+    font-size: x-large;
+    margin-right: 10px;
 }
 
-#btn-category{
+.browse-text{
+    flex: 1;
+}
+
+.browse-arrow{
+    flex: 0;
+}
+
+.special-offer{
     display: flex;
-    width: 255px;
-    font-size: 18px;
-}
-
-#btn-special{
+    background-color: #20D3C2;
     border-radius: 25px;
     width: 156px;
-    line-height: 37px;
-    font-weight: bold;
-    font-size: 16px; 
-  }
+    justify-content: center;
+}
 
-#bars{
-    margin-right: 25px;
-    font-size: x-large;
-    max-height: 48px;
-    align-items: center;
-    text-align: center;
-  }
+    .special-offer:hover{
+        background-color: #0E153D;
+    }
+
+.special-text{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
