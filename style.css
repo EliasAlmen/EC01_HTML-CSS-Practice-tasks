@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
+/* CRED HASSE */
 :root{
     --color-theme: #20D3C2;
     --color-theme-light: #EDFCFA;
@@ -31,79 +32,122 @@
     --border-radius-rounded: 50%;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* GENERAL */
+
+* > .fa-hover-show,
+*:hover > .fa-hover-hidden {
+  display: none;
+}
+*:hover > .fa-hover-show {
+  display: inline-block;
 }
 
-
-body{
-    font-family: 'Roboto';
-    font-size: 16px;
+html, body{
+    font-family: var(--font-roboto);
     line-height: 1.5;
-}
-
-ul{
-    list-style-type: none;
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
 }
 
 a{
     text-decoration: none;
-    color: #ffffff;
 }
 
+/* TOP MENU */
 .navbar-custom{
     background: #20D3C2;
-    height: 40px;
 }
 
-.navbar-social-link:hover, .navbar-hover:hover{
-    color: #0E153D;
-}
+    .navbar-custom > .container{
+        height: 40px;
+    }
 
-.navbar-nav{
-    justify-content: start;
-    height: 40px;
-}
+    .navbar-custom .navbar-nav{
+        justify-content: start;
+        height: 100%;
+    }
 
-/* LOGO AND ACCOUNT LINKS */
-.header-nav{
+        .navbar-custom .navbar-nav .btn-languages{
+            display: flex;
+        }
+
+    .navbar-custom .navbar-nav .dropdown-theme button{
+        background-color: var(--color-theme);
+        color: var(--color-white);
+        border: none;
+    }
+
+        .navbar-custom .navbar-nav .dropdown-theme button:hover{
+            color: var(--color-theme-dark);
+        }
+
+        .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu{
+            background-color: var(--color-theme);
+            color: var(--color-white);
+        }
+    
+            .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu .dropdown-item{
+                color: var(--color-white);
+            }
+            
+                .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu .dropdown-item:hover{
+                    background-color: var(--color-theme-dark);
+                }
+
+    .navbar-custom .navbar-nav .navbar-links, .navbar-custom .navbar-nav .navbar-social{
+        color: var(--color-white);
+    }
+
+        .navbar-custom .navbar-nav .navbar-links:hover, .navbar-custom .navbar-nav .navbar-social:hover{
+            color: var(--color-theme-dark);
+        }
+
+    .navbar-custom .navbar-nav .navbar-social{
+        font-size: var(--font-size-14);
+    }
+
+
+
+
+/* 
+
+LOGO AND ACCOUNT LINKS
+Testing flex properties to arrange items
+
+*/
+.header .header-nav{
     display: flex;
     height: 105px;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-logotype{
-    flex: 2.5;
-}
-
-.header-account{
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-}
-
-.header-user{
-    flex: 0.1;
-}
-
-    .header-user > a{
-        color: #0E153D;
+    .header .header-nav .header-logotype{
+        flex: 2.5;
     }
 
-    .header-nav-hover-dark:hover{
-        color: #20D3C2;
+    .header .header-nav .header-account{
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
     }
 
-.fa-regular{
-    margin-right: 10px;
-}
+        .header .header-nav .header-account .header-user{
+            flex: 0.1;
+        }
+
+            .header .header-nav .header-account .header-user > a{
+                color: #0E153D;
+            }
+
+        .header .header-nav .header-account .header-user .header-nav-hover-dark:hover{
+            color: #20D3C2;
+        }
 
 #header-user-myaccount{
     flex: 0.5;
 }
+
 
 /* BROWSE OCH SPECIAL OFFER */
 .section {
@@ -112,59 +156,59 @@ a{
     border-bottom: 1px solid rgba(211, 211, 211, 0.5);
 }
 
-.buttons-section{
-    display: flex;
-    justify-content: space-between;
-    line-height: 50px;
-}
-
-.browse-categories{
-    display: flex;
-}
-
-.browse-link{
-    display: flex;
-    justify-content: left;
-    background-color: #20D3C2;
-    color: #ffffff;
-    width: 255px;
-    text-decoration: none;
-    padding: 0 15px;
-}
-
-    .browse-link:hover{
-        background-color: #0E153D;
+    .section .buttons-section{
+        display: flex;
+        justify-content: space-between;
+        line-height: 50px;
     }
 
-.browse-bars{
-    flex: 0;
-    font-size: x-large;
-    margin-right: 10px;
-}
+        .section .buttons-section .browse-categories{
+            display: flex;
+        }
 
-.browse-text{
-    flex: 1;
-}
+            .section .buttons-section .browse-categories .browse-link{
+            display: flex;
+            justify-content: left;
+            background-color: #20D3C2;
+            color: #ffffff;
+            width: 255px;
+            text-decoration: none;
+            padding: 0 15px;
+            }
 
-.browse-arrow{
-    flex: 0;
-}
+                .section .buttons-section .browse-categories .browse-link:hover{
+                    background-color: #0E153D;
+                }
 
-.special-offer{
-    display: flex;
-    background-color: #20D3C2;
-    border-radius: 25px;
-    width: 156px;
-    justify-content: center;
-}
+            .section .buttons-section .browse-categories .browse-link .browse-bars{
+                flex: 0;
+                font-size: x-large;
+                margin-right: 10px;
+            }
 
-    .special-offer:hover{
-        background-color: #0E153D;
+            .section .buttons-section .browse-categories .browse-link .browse-text{
+                flex: 1;
+            }
+
+            .section .buttons-section .browse-categories .browse-link .browse-arrow{
+                flex: 0;
+            }
+
+    .section .buttons-section .special-offer{
+        display: flex;
+        background-color: #20D3C2;
+        border-radius: 25px;
+        width: 156px;
+        justify-content: center;
     }
 
-.special-text{
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-}
+        .section .buttons-section .special-offer:hover{
+            background-color: #0E153D;
+        }
+
+    .section .buttons-section .special-offer .special-text{
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+    }
 

@@ -10,28 +10,45 @@
    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar-custom">
+    <header class="navbar-custom">
         <div class="container">
-            <div class="navbar-nav flex-row align-items-center">
-                <div class="btn-eng-eur me-auto">
-                    <a href="#" class="navbar-hover">ENG</a>
-                    <a href="#" class="navbar-hover">EUR</a>
+            <nav class="navbar-nav flex-row align-items-center">
+                <div class="btn-languages me-auto">
+                    <div class="dropdown dropdown-theme me-3">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="language-eng">ENG<i class="fa-solid fa-chevron-down ms-3"></i></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eng</a></li>
+                            <li><a class="dropdown-item" href="#">Sv</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown dropdown-theme me-3">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="language-eng">EUR<i class="fa-solid fa-chevron-down ms-3"></i></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">EUR €</a></li>
+                            <li><a class="dropdown-item" href="#">USD $</a></li>
+                            <li><a class="dropdown-item" href="#">SEK kr</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="navbar-links me-5">
-                    <a href="#" class="navbar-hover me-4">Newletter</a>
-                    <a href="#" class="navbar-hover me-4">Contact us</a>
-                    <a href="#" class="navbar-hover">FAQs</a>
+                <div class="me-5">
+                    <a href="#" class="navbar-links me-4">Newletter</a>
+                    <a href="#" class="navbar-links me-4">Contact us</a>
+                    <a href="#" class="navbar-links">FAQs</a>
                 </div>
-                <div class="navbar-social">
-                    <a href="#" class="navbar-social-link"><i class="fa fa-facebook me-3" aria-hidden="true"></i></a>
-                    <a href="#" class="navbar-social-link"><i class="fa fa-twitter me-3" aria-hidden="true"></i></a>
-                    <a href="#" class="navbar-social-link"><i class="fa fa-instagram me-3" aria-hidden="true"></i></a>
-                    <a href="#" class="navbar-social-link"><i class="fa fa-pinterest me-3" aria-hidden="true"></i></a>
-                    <a href="#" class="navbar-social-link"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <div>
+                    <a href="#" class="navbar-social"><i class="fa fa-facebook me-3" aria-hidden="true"></i></a>
+                    <a href="#" class="navbar-social"><i class="fa fa-twitter me-3" aria-hidden="true"></i></a>
+                    <a href="#" class="navbar-social"><i class="fa fa-instagram me-3" aria-hidden="true"></i></a>
+                    <a href="#" class="navbar-social"><i class="fa fa-pinterest me-3" aria-hidden="true"></i></a>
+                    <a href="#" class="navbar-social"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                 </div>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </header>
    <header class="header">
       <div class="container">
         <div class="header-nav">
@@ -41,22 +58,27 @@
             <div class="header-account">
                 <div class="header-user" id="header-user-myaccount">
                     <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-user"></i>My account
+                        <i class="fa-regular fa-user fa-hover-hidden me-3"></i>
+                        <i class="fa-solid fa-user fa-hover-show me-3"></i>
+                        My account
                     </a>
                 </div>
                 <div class="header-user">
                     <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart fa-hover-hidden"></i>
+                        <i class="fa-solid fa-heart fa-hover-show"></i>
                     </a>
                 </div>
                 <div class="header-user">
                     <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-shuffle"></i>
+                        <i class="fa-regular fa-shuffle fa-hover-hidden"></i>
+                        <i class="fa-solid fa-shuffle fa-hover-show"></i>
                     </a>
                 </div>
                 <div class="header-user">
                     <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-cart-shopping"></i>
+                        <i class="fa-regular fa-cart-shopping fa-hover-hidden"></i>
+                        <i class="fa-solid fa-cart-shopping fa-hover-show"></i>
                     </a>
                 </div>
                 <div class="header-user">
