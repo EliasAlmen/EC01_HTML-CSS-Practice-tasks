@@ -33,18 +33,17 @@
     --border-radius-rounded: 50%;
 }
 
+/*----Taget från StackOverflow---- */
+* > .fa-hover-show,             /* */
+*:hover > .fa-hover-hidden {    /* */
+  display: none;                /* */
+}                               /* */
+*:hover > .fa-hover-show {      /* */
+  display: inline-block;        /* */
+}                               /* */
+/* ------------------------------ */
+
 /* GENERAL */
-
-/* Taget från StackOverflow */
-* > .fa-hover-show,
-*:hover > .fa-hover-hidden {
-  display: none;
-}
-*:hover > .fa-hover-show {
-  display: inline-block;
-}
-/* Taget från StackOverflow */
-
 html, body{
     font-family: var(--font-roboto);
     line-height: 1.5;
@@ -220,7 +219,7 @@ Testing flex properties to arrange items
         font-size: var(--font-size-60);
     }
 
-        .banner .banner-shopping h1:nth-child(2){
+        .banner .banner-shopping strong{
             color: var(--color-theme);
             font-weight: var(--font-weight-bold);
         }
@@ -246,4 +245,39 @@ Testing flex properties to arrange items
     
     .banner .banner-picture{
         max-height: 37.5rem;
+    }
+
+.commitments{
+    margin: 0 auto;
+    display: flex;
+    height: 22.938rem;
+    width: 105.063rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+    .commitments .commit {
+        width: 24.875rem;
+        height: 8.563rem;
+        background-color: var(--color-theme-light);
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        color: var(--color-theme-dark);
+    }
+
+        .commitments .commit:hover{
+            background-color: var(--color-theme);
+            color: var(--color-white);
+        }
+
+    .commitments .commit .card-body{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        margin-left: 1rem;
     }
