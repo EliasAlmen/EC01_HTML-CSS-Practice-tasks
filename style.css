@@ -9,6 +9,7 @@
     --color-white: #FFFFFF;
     --color-gray-0: #AAAAAA;
     --color-gray-1: #CCCCCC;
+    --color-gray-1-1: #EEEEEE;
     --color-gray-2: #E3E3E3;
     --color-gray-3: #FFFFFF;
     --color-gray-4: #F6F6F6;
@@ -20,12 +21,12 @@
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
-    --font-size-14: 1.17rem;
-    --font-size-16: 1.33rem;
-    --font-size-18: 1.50rem;
-    --font-size-24: 2rem;
-    --font-size-36: 3rem;
-    --font-size-60: 5rem;
+    --font-size-14: 0.875rem;
+    --font-size-16: 1.00rem;
+    --font-size-18: 1.125rem;
+    --font-size-24: 1.5rem;
+    --font-size-36: 2.25rem;
+    --font-size-60: 3.75rem;
 
     --border-radius-small: 8px;
     --border-radius-medium: 25px;
@@ -34,6 +35,7 @@
 
 /* GENERAL */
 
+/* Taget från StackOverflow */
 * > .fa-hover-show,
 *:hover > .fa-hover-hidden {
   display: none;
@@ -41,6 +43,7 @@
 *:hover > .fa-hover-show {
   display: inline-block;
 }
+/* Taget från StackOverflow */
 
 html, body{
     font-family: var(--font-roboto);
@@ -55,11 +58,11 @@ a{
 
 /* TOP MENU */
 .navbar-custom{
-    background: #20D3C2;
+    background: var(--color-theme);
 }
 
     .navbar-custom > .container{
-        height: 40px;
+        height: 2.5rem;
     }
 
     .navbar-custom .navbar-nav{
@@ -103,21 +106,16 @@ a{
         }
 
     .navbar-custom .navbar-nav .navbar-social{
-        font-size: var(--font-size-14);
+        font-size: var(--font-size-16);
     }
 
-
-
-
 /* 
-
 LOGO AND ACCOUNT LINKS
 Testing flex properties to arrange items
-
 */
 .header .header-nav{
     display: flex;
-    height: 105px;
+    height: 6.563rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -137,11 +135,11 @@ Testing flex properties to arrange items
         }
 
             .header .header-nav .header-account .header-user > a{
-                color: #0E153D;
+                color: var(--color-theme-dark);
             }
 
         .header .header-nav .header-account .header-user .header-nav-hover-dark:hover{
-            color: #20D3C2;
+            color: var(--color-theme);
         }
 
 #header-user-myaccount{
@@ -151,64 +149,101 @@ Testing flex properties to arrange items
 
 /* BROWSE OCH SPECIAL OFFER */
 .section {
-    height: 52px;
-    border-top: 1px solid rgba(211, 211, 211, 0.5);
-    border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+    height: 3.188rem;
+    border-top: 0.063rem solid var(--color-gray-2);
 }
 
     .section .buttons-section{
         display: flex;
         justify-content: space-between;
-        line-height: 50px;
+        align-items: center;
+        line-height: 100%;
     }
 
         .section .buttons-section .browse-categories{
             display: flex;
         }
 
-            .section .buttons-section .browse-categories .browse-link{
-            display: flex;
-            justify-content: left;
-            background-color: #20D3C2;
-            color: #ffffff;
-            width: 255px;
-            text-decoration: none;
-            padding: 0 15px;
+            .section .buttons-section .browse-categories .dropdown button{
+                justify-content: space-between;
+                font-size: var(--font-size-18);
+                background-color: var(--color-theme);
+                color: var(--color-white);
+                width: 15.938rem;
+                text-decoration: none;
+                border: none;
+                padding: 0 0.938rem;
+                height: 3.125rem;
+                border-radius: 0;
             }
 
-                .section .buttons-section .browse-categories .browse-link:hover{
-                    background-color: #0E153D;
+                .section .buttons-section .browse-categories .dropdown button:hover{
+                    background-color: var(--color-theme-dark);
                 }
 
-            .section .buttons-section .browse-categories .browse-link .browse-bars{
-                flex: 0;
-                font-size: x-large;
-                margin-right: 10px;
-            }
-
-            .section .buttons-section .browse-categories .browse-link .browse-text{
-                flex: 1;
-            }
-
-            .section .buttons-section .browse-categories .browse-link .browse-arrow{
-                flex: 0;
-            }
-
-    .section .buttons-section .special-offer{
+    .section .buttons-section .special-offer button{
         display: flex;
-        background-color: #20D3C2;
-        border-radius: 25px;
-        width: 156px;
         justify-content: center;
+        align-items: center;
+        background-color: var(--color-theme);
+        border-radius: var(--border-radius-medium);
+        width: 9.75rem;
+        /* line-height: 2.313rem; */
+        border: none;
     }
 
-        .section .buttons-section .special-offer:hover{
-            background-color: #0E153D;
+        .section .buttons-section .special-offer button:hover{
+            background-color: var(--color-theme-dark);
         }
 
-    .section .buttons-section .special-offer .special-text{
-        text-decoration: none;
-        color: #ffffff;
-        font-weight: bold;
+        .section .buttons-section .special-offer .special-text{
+            color: var(--color-white);
+            font-family: var(--font-roboto);
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-16);
+        }
+
+.banner{
+    background-color: var(--color-gray-1-1);
+    height: 37.5rem;
+}
+
+.banner > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .banner .banner-shopping h1{
+        color: var(--color-theme-dark);
+        font-family: var(--font-play);
+        font-size: var(--font-size-60);
     }
 
+        .banner .banner-shopping h1:nth-child(2){
+            color: var(--color-theme);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .banner .banner-shopping .shopping-shopnow{
+            text-align: center;
+            background-color: var(--color-gray-3);
+            border-radius: var(--border-radius-medium);
+            width: 9.75rem;
+            line-height: 3.375rem;
+        }
+
+            .banner .banner-shopping .shopping-shopnow .shopnow-text{
+                color: var(--color-theme);
+                font-size: var(--font-size-18);
+                font-family: var(--font-roboto);
+                font-weight: var(--font-weight-medium);
+            }
+            
+            .banner .banner-shopping .shopping-shopnow:hover{
+                background-color: var(--color-theme-dark);
+            }
+    
+    .banner .banner-picture{
+        max-height: 37.5rem;
+    }
