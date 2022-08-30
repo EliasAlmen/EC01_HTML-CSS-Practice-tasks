@@ -84,7 +84,7 @@ a{
         }
 
         .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu{
-            background-color: var(--color-theme);
+            background-color: var(--color-theme-dark);
             color: var(--color-white);
         }
     
@@ -93,7 +93,7 @@ a{
             }
             
                 .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu .dropdown-item:hover{
-                    background-color: var(--color-theme-dark);
+                    background-color: var(--color-theme);
                 }
 
     .navbar-custom .navbar-nav .navbar-links, .navbar-custom .navbar-nav .navbar-social{
@@ -275,9 +275,23 @@ Testing flex properties to arrange items
             color: var(--color-white);
         }
 
+            .commitments .commit:hover .card-body h6{
+                color: var(--color-white);
+            }
+
+        .card-icon{
+            stroke: var(--color-white);
+            fill: var(--color-white);
+        }
+
     .commitments .commit .card-body{
         display: flex;
         flex-direction: column;
         padding-bottom: 0;
         margin-left: 1rem;
     }
+
+        .commitments .commit .card-body h6{
+            font-weight: var(--font-weight-medium);
+            color: var(--color-theme);
+        }
