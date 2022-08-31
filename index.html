@@ -10,6 +10,7 @@
    <link href="style.css" rel="stylesheet">
 </head>
 <body>
+    <!-- TOP BAR -->
     <header class="navbar-custom">
         <div class="container">
             <nav class="navbar-nav flex-row align-items-center">
@@ -49,69 +50,75 @@
             </nav>
         </div>
     </header>
-   <header class="header">
-      <div class="container">
-        <div class="header-nav">
-            <div class="header-logotype">
-                <img src="/images/brand-logo.svg" alt="Logotype">
-            </div>
-            <div class="header-account">
-                <div class="header-user" id="header-user-myaccount">
-                    <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-user fa-hover-hidden me-3"></i>
-                        <i class="fa-solid fa-user fa-hover-show me-3"></i>
-                        My account
-                    </a>
+
+    <!-- Account settings and brand logotype -->
+    <header class="header">
+        <div class="container">
+            <div class="header-nav">
+                <div class="header-logotype">
+                    <img src="/images/brand-logo.svg" alt="Logotype">
                 </div>
-                <div class="header-user">
-                    <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-heart fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-hover-show"></i>
-                    </a>
-                </div>
-                <div class="header-user">
-                    <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-shuffle fa-hover-hidden"></i>
-                        <i class="fa-solid fa-shuffle fa-hover-show"></i>
-                    </a>
-                </div>
-                <div class="header-user">
-                    <a href="#" class="header-nav-hover-dark">
-                        <i class="fa-regular fa-cart-shopping fa-hover-hidden"></i>
-                        <i class="fa-solid fa-cart-shopping fa-hover-show"></i>
-                    </a>
-                </div>
-                <div class="header-user">
-                    <a href="#" class="header-nav-hover-dark">€9999.00</a>
+                <div class="header-account">
+                    <div class="header-user" id="header-user-myaccount">
+                        <a href="#" class="header-nav-hover-dark">
+                            <i class="fa-regular fa-user fa-hover-hidden me-3"></i>
+                            <i class="fa-solid fa-user fa-hover-show me-3"></i>
+                            My account
+                        </a>
+                    </div>
+                    <div class="header-user">
+                        <a href="#" class="header-nav-hover-dark">
+                            <i class="fa-regular fa-heart fa-hover-hidden"></i>
+                            <i class="fa-solid fa-heart fa-hover-show"></i>
+                        </a>
+                    </div>
+                    <div class="header-user">
+                        <a href="#" class="header-nav-hover-dark">
+                            <i class="fa-regular fa-shuffle fa-hover-hidden"></i>
+                            <i class="fa-solid fa-shuffle fa-hover-show"></i>
+                        </a>
+                    </div>
+                    <div class="header-user">
+                        <a href="#" class="header-nav-hover-dark">
+                            <i class="fa-regular fa-cart-shopping fa-hover-hidden"></i>
+                            <i class="fa-solid fa-cart-shopping fa-hover-show"></i>
+                        </a>
+                    </div>
+                    <div class="header-user">
+                        <a href="#" class="header-nav-hover-dark">€9999.00</a>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
-   </header>
-   <section class="section">
-      <div class="container">
-         <div class="buttons-section">
-            <div class="browse-categories">
-               <div class="dropdown">
-                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>
-                            <i class="fa-regular fa-bars me-3"></i> Browse Categories
-                        </span>
-                        <i class="fa-regular fa-chevron-down ms-3"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"></a>Computers</li>
-                        <li><a class="dropdown-item" href="#"></a>TV & Displays</li>
-                    </ul>
-               </div>               
+    </header>
+
+   <!-- MENU FOR "browse categories" and "Special offer" -->
+    <section class="section">
+        <div class="container">
+            <div class="buttons-section">
+                <div class="browse-categories">
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>
+                                <i class="fa-regular fa-bars me-3"></i> Browse Categories
+                            </span>
+                            <i class="fa-regular fa-chevron-down ms-3"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"></a>Computers</li>
+                            <li><a class="dropdown-item" href="#"></a>TV & Displays</li>
+                        </ul>
+                    </div>               
+                </div>
+                <div class="special-offer">
+                    <button class="btn special-text">SPECIAL OFFER</button>
+                </div>
             </div>
-            <div class="special-offer">
-               <button class="btn special-text">SPECIAL OFFER</button>
-            </div>
-         </div>
-      </div>
-   </section>
-   <div class="banner">
+        </div>
+    </section>
+
+    <!-- BANNER - SHOPPING IS MORE FUN + PPL PICTURE -->
+    <section class="banner">
         <div class="container">
             <div class="banner-shopping">
                 <h1>Shopping is 
@@ -126,46 +133,126 @@
                 <a href="#"><img src="/images/Banner-thumb.svg" alt="Banner-thumb"></a>
             </div>
         </div>
-   </div>
-   <ul class="commitments">
-        <li class="commit card">
-            <span class="card-icon">
-                <img src="images/commit-box-icon.svg" alt="" class="commit-icon">
-            </span>
-            <span class="card-body">
-                <h6>Free shipping</h6>
-                <p>For a local customer, we provide<br> free shipping facility</p>
-            </span>
-        </li>
-        <li class="commit card">
-            <div class="card-icon">
-                <img src="images/commit-24-icon.svg" alt="" class="commit-icon fa-hover-hidden">
-                <img src="images/commit-24-white-icon.svg" alt="" class="commit-icon fa-hover-show">
-            </div>
-            <div class="card-body">
-                <h6>24/7 support</h6>
-                <p>For any inquiry, we are available 24<br> hours every day</p>
-            </div>
-        </li>
-        <li class="commit card">
-            <div class="card-icon">
-                <img src="images/commit-payment-icon.svg" alt="" class="commit-icon">
-            </div>
-            <div class="card-body">
+    </section>
 
-            </div>
-        </li>
-        <li class="commit card">
-            <div class="card-icon">
-                <img src="images/commit-fast-icon.svg" alt="" class="commit-icon">
-            </div>
-            <div class="card-body">
+    <section>
+        <ul class="commitments container-fluid mb-0">
+            <li class="commit card">
+                <span class="card-icon">
+                    <img src="images/commit-box-icon.svg" alt="" class="commit-icon">
+                </span>
+                <span class="card-body">
+                    <h6>Free shipping</h6>
+                    <p>For a local customer, we provide<br> free shipping facility</p>
+                </span>
+            </li>
+            <li class="commit card">
+                <div class="card-icon">
+                    <img src="images/commit-24-icon.svg" alt="" class="commit-icon">
+                </div>
+                <div class="card-body">
+                    <h6>24/7 support</h6>
+                    <p>For any inquiry, we are available 24<br> hours every day</p>
+                </div>
+            </li>
+            <li class="commit card">
+                <div class="card-icon">
+                    <img src="images/commit-payment-icon.svg" alt="" class="commit-icon">
+                </div>
+                <div class="card-body">
+                    <h6>Online payment</h6>
+                    <p>You can pay quickly and easily with our online payment system</p>
+                </div>
+            </li>
+            <li class="commit card">
+                <div class="card-icon">
+                    <img src="images/commit-fast-icon.svg" alt="" class="commit-icon">
+                </div>
+                <div class="card-body">
+                    <h6>Fast delivery</h6>
+                    <p>We understand your urgency and we deliver in a fast way</p>
+                </div>
+            </li>
+        </ul>
+    </section>
 
+    <!-- Shop by categories -->
+    <section class="section-shop">
+        <div class="container">
+            <div class="shop-by-category">
+                <h1>
+                    <strong>SHOP BY <span id="category">CATEGORY</span></strong>
+                </h1>
             </div>
-        </li>
-   </ul>
+            <div class="zigzag my-4">
+                <img src="images/Path-zigzag.svg" alt="">
+            </div>
+            <div class="we-always-try">
+                <p>
+                    We always try to give you the best product within a fast and reliable way
+                </p>
+            </div>
 
-   
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+            <!-- THE GRID -->
+
+            <div class="grid my-4">
+                <div id="category-box-1" class="box">
+                    <div class="small-box">
+                        <h1>Men</h1>
+                    </div>
+                </div>
+                <div id="category-box-2" class="box">
+                    <div class="small-box">
+                        <h1>Women</h1>
+                    </div>
+                </div>
+                <div id="category-box-3" class="box">
+                    <div class="small-box">
+                        <h1>Kids</h1>
+                    </div>
+                </div>
+                <div id="category-box-4" class="box">
+                    <div class="small-box">
+                        <h1>Shoes</h1>
+                    </div>
+                </div>
+                <div id="category-box-5" class="box">
+                    <div class="small-box">
+                        <h1>Hats</h1>
+                    </div>
+                </div>
+                <div id="category-box-6" class="box">
+                    <div class="small-box">
+                        <h1>Sunglasses</h1>
+                    </div>
+                </div>
+                <div id="category-box-7" class="box">
+                    <div class="small-box">
+                        <h1>Watches</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW ARRIVALS -->
+    <section class="section-arrivals">
+        <div class="container">
+            <div class="new-arrivals">
+                <h1>
+                    <strong>SHOP BY <span id="category">CATEGORY</span></strong>
+                </h1>
+            </div>
+            <div class="zigzag my-4">
+                <img src="images/Path-zigzag.svg" alt="">
+            </div>
+            <div class="we-always-try">
+                <p>
+                    We always try to give you the best product within a fast and reliable way
+                </p>
+            </div>
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
