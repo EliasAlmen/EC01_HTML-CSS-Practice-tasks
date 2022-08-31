@@ -316,7 +316,6 @@ Testing flex properties to arrange items
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 2.25rem;
     }
 
     .section-shop .shop-by-category, .we-always-try, .zigzag{
@@ -365,9 +364,9 @@ Testing flex properties to arrange items
             grid-column: 1/3;
             grid-row: 2/4;
         }
-        #category-box-5 { 
+        /* #category-box-5 { 
             grid-column: ;
-        }
+        } */
         #category-box-6 { 
             grid-column: 3/5;
         }
@@ -391,36 +390,43 @@ Testing flex properties to arrange items
             font-size: var(--font-size-16);
             margin: 0.5rem;
             padding: 0;
+        }
+
+            /* SPECIAL LENGHT BOXES */
+            #category-box-2 div{
+                width: 16.5rem;
+            }
+
+            #category-box-3 div{
+                width: 16.5rem;
+            }
             
-        }
+            #category-box-4 div{
+                width: 16.5rem;
+            }
 
-        #category-box-2 div{
-            width: 16.5rem;
-        }
-
-        #category-box-3 div{
-            width: 16.5rem;
-        }
-        
-        #category-box-4 div{
-            width: 16.5rem;
-        }
-
-        #category-box-6 div{
-            width: 16.5rem;
-            height: 4.688rem;
-        }
+            #category-box-6 div{
+                width: 16.5rem;
+                height: 4.688rem;
+            }
 
 /* SHOP BY CATEGORY */
-.section-arrivals > .container{
+    .section-arrivals > .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 2.25rem;
     }
 
-    .section-arrivals .shop-by-category, .we-always-try, .zigzag{
+    .section-arrivals .new-arrivals, .we-always-try, .zigzag{
         text-align: center;
         color: var(--color-theme-dark);
-        
+    }
+
+    .section-arrivals .new-arrivals{
+        font-family: var(--font-play);
+        margin-bottom: -1rem;
+    }
+
+    .section-arrivals .new-arrivals #category{
+        color: var(--color-theme);
     }
