@@ -339,7 +339,7 @@ Testing flex properties to arrange items
 
 /* SHOP BY CATEGORY */
 .section-shop > .container{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     }
@@ -472,7 +472,7 @@ Testing flex properties to arrange items
 
 /* NEW ARRIVALS */
     .section-arrivals > .container {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     }
@@ -515,6 +515,14 @@ Testing flex properties to arrange items
             align-items: center;
         }
 
+        .new-arrivals-highlight .highlight-box .highlight-box-small h1{
+            font-size: var(--font-size-18);
+            font-weight: var(--font-weight-regular);
+            color: var(--color-white);
+            margin: 0 1rem;
+            padding: 0;
+        }
+
         #highlight-box-quick-menu {
             background-color:#0e153dda;
         }
@@ -523,3 +531,21 @@ Testing flex properties to arrange items
             position: relative;
             z-index: -1;
         }
+
+/* REA REA REA */
+.section-rea .container .rea-body{
+    display: flex;
+    background-color: var(--color-gray-1);
+    height: 26.125rem;
+}
+
+.section-rea .bar-color{
+    width: 15.938rem;
+    background-color: var(--color-theme);
+}
+
+.section-rea .rea-text{
+    width: 27.813rem;
+    font-family: var(--font-roboto);
+    font-size: var(--font-size-14);
+}
