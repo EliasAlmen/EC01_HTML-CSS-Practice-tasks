@@ -58,6 +58,12 @@ a{
     text-decoration: none;
 }
 
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* TOP MENU */
 .navbar-custom{
     background: var(--color-theme);
@@ -141,7 +147,7 @@ Testing flex properties to arrange items
             }
 
         .header .header-nav .header-account .header-user .header-nav-hover-dark:hover{
-            color: var(--color-theme);
+            color: var(--color-theme-dark);
         }
 
 #header-user-myaccount{
@@ -182,6 +188,22 @@ Testing flex properties to arrange items
                 .section .buttons-section .browse-categories .dropdown button:hover{
                     background-color: var(--color-theme-dark);
                 }
+
+            .section .buttons-section .browse-categories .dropdown .dropdown-menu{
+                background-color: var(--color-theme-dark);
+                color: var(--color-white);
+            }
+
+            .section .buttons-section .browse-categories .dropdown .dropdown-menu .dropdown-item {
+                background-color: var(--color-theme-dark);
+                color: var(--color-white);
+            }
+
+                .section .buttons-section .browse-categories .dropdown .dropdown-menu .dropdown-item:hover{
+                    background-color: var(--color-theme);
+                }
+
+                
 
     .section .buttons-section .special-offer button{
         display: flex;
@@ -264,7 +286,7 @@ Testing flex properties to arrange items
 /* BOXES OF BROKEN PROMISES */
 .commitments{
     /* margin: 0 auto; */
-    display: flex;
+    display: none;
     height: 22.938rem;
     width: 105.063rem;
     justify-content: space-between;
@@ -283,19 +305,23 @@ Testing flex properties to arrange items
         align-items: center;
         padding: 1.5rem;
         color: var(--color-theme-dark);
+        transition: 250ms;
     }
 
         .commitments .commit:hover{
             background-color: var(--color-theme);
             color: var(--color-white);
+            
         }
 
             .commitments .commit:hover .card-body h6{
                 color: var(--color-white);
+                transition: 250ms;
             }
 
             .commitments .commit:hover .card-icon img{
                 filter: sepia(0%) brightness(1000%);
+                transition: 250ms;
             }
 
     .commitments .commit .card-body{
@@ -346,9 +372,19 @@ Testing flex properties to arrange items
             display: flex;
             justify-content: flex-start;
             align-items: flex-end;
-            background-color: var(--color-gray-1);
+            /* background-color: var(--color-gray-1); */
             border-radius: var(--border-radius-small);
+            overflow: hidden;
+            position: relative;
         }
+
+            .section-shop .grid .box .grid-product-image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                z-index: -1;
+            }
 
         #category-box-1 { 
             grid-column: 1/2;
@@ -382,15 +418,39 @@ Testing flex properties to arrange items
             border-radius: 0 var(--border-radius-small);
             padding: 0.25rem;
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: 250ms;
+        }
+
+        .section-shop .grid .box .small-box:hover{
+            height: 4.688rem;
         }
 
         .section-shop .grid .box .small-box h1{
             font-size: var(--font-size-16);
+            font-weight: var(--font-weight-medium);
             margin: 0.5rem;
             padding: 0;
         }
+
+        /* #small-box-special{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        } */
+
+        .section-shop .grid .box .small-box p{
+            color: var(--color-white);
+            margin: 0 0.5rem;
+            font-size: var(--font-size-14);
+            font-family: var(--font-weight-regular);
+        }
+
+        /* #small-box-special h1{
+            margin-bottom: 0.25rem;
+        } */
 
             /* SPECIAL LENGHT BOXES */
             #category-box-2 div{
@@ -407,10 +467,10 @@ Testing flex properties to arrange items
 
             #category-box-6 div{
                 width: 16.5rem;
-                height: 4.688rem;
+                /* height: 4.688rem; */
             }
 
-/* SHOP BY CATEGORY */
+/* NEW ARRIVALS */
     .section-arrivals > .container {
     display: flex;
     flex-direction: column;
@@ -427,6 +487,39 @@ Testing flex properties to arrange items
         margin-bottom: -1rem;
     }
 
-    .section-arrivals .new-arrivals #category{
-        color: var(--color-theme);
+        .section-arrivals .new-arrivals #category{
+            color: var(--color-theme);
+        }
+
+    .new-arrivals-highlight{
+        display: flex;
+        justify-content: space-between;
     }
+        /* DESIGN CHOICE, keep ratio of boxes due to container */
+        .new-arrivals-highlight .highlight-box{
+            height: 25rem;
+            width: 21.875rem;
+            background-color: var(--color-gray-1-1);
+            border-radius: var(--border-radius-small);
+            overflow: hidden;
+        }
+
+        .new-arrivals-highlight .highlight-box .highlight-box-small{
+            height: 3.188rem;
+            width: 100%;
+            background-color: var(--color-dark-opacity);
+            color: var(--color-theme);
+            padding: 0.25rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #highlight-box-quick-menu {
+            background-color:#0e153dda;
+        }
+        
+        #highlight-box-quick-menu img {
+            position: relative;
+            z-index: -1;
+        }
