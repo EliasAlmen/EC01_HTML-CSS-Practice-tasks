@@ -260,7 +260,7 @@ Testing flex properties to arrange items
             background-color: var(--color-gray-3);
             border-radius: var(--border-radius-medium);
             width: 9.75rem;
-            line-height: 3.375rem;
+            line-height: 3rem;
         }
 
             .banner .banner-shopping .shopping-shopnow .shopnow-text{
@@ -311,7 +311,6 @@ Testing flex properties to arrange items
         .commitments .commit:hover{
             background-color: var(--color-theme);
             color: var(--color-white);
-            
         }
 
             .commitments .commit:hover .card-body h6{
@@ -359,6 +358,7 @@ Testing flex properties to arrange items
             color: var(--color-theme);
         }
 
+        /* THE GRID */
         .section-shop .grid{
             display: grid;
             align-items: stretch;
@@ -470,9 +470,9 @@ Testing flex properties to arrange items
                 /* height: 4.688rem; */
             }
 
-/* NEW ARRIVALS */
+/* NEW ARRIVALS + FEATURED PRODUCTS */
     .section-arrivals > .container {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     }
@@ -532,20 +532,301 @@ Testing flex properties to arrange items
             z-index: -1;
         }
 
+    .section-arrivals .height{
+        height: 9rem;
+    }
+
 /* REA REA REA */
-.section-rea .container .rea-body{
-    display: flex;
+.section-rea {
     background-color: var(--color-gray-1);
+}
+
+    .section-rea .container .rea-body{
+        display: none;
+        justify-content: space-between;
+        height: 26.125rem;
+    }
+
+    .section-rea .bar-color{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15.938rem;
+        background-color: var(--color-theme);
+        color: var(--color-white);
+    }
+
+        .section-rea .bar-color h1{
+            font-family: var(--font-play);
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-60);
+            margin-bottom: 0;
+        }
+
+            .section-rea .bar-color h1 span{
+                font-size: var(--font-size-36);
+            }
+
+            .section-rea .bar-color > .btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: var(--color-theme-dark);
+                border-radius: var(--border-radius-medium);
+                width: 9.625rem;
+                height: 3rem;
+                border: none;
+            }
+
+                .section-rea .bar-color > .btn > .btn-text{
+                    color: var(--color-white);
+                    font-size: var(--font-size-18);
+                    font-family: var(--font-roboto);
+                    font-weight: var(--font-weight-medium);
+                    margin: 0;
+                    transition: color 250ms;
+                }
+                
+                .section-rea .bar-color > .btn:hover{
+                    background-color: var(--color-white);
+                }
+
+                .section-rea .bar-color > .btn:hover .btn-text{
+                        color: var(--color-theme-dark);
+                    }
+
+        .section-rea .rea-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 27.813rem;
+            font-family: var(--font-roboto);
+            font-size: var(--font-size-14);
+            color: var(--color-white);
+        }
+
+        .section-rea .rea-text > .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-medium);
+            width: 9.625rem;
+            height: 3rem;
+            border: none;
+        }
+
+            .section-rea .rea-text > .btn > .btn-text{
+                color: var(--color-theme);
+                font-size: var(--font-size-18);
+                font-family: var(--font-roboto);
+                font-weight: var(--font-weight-medium);
+                margin: 0;
+                transition: color 250ms;
+            }
+            
+            .section-rea .rea-text > .btn:hover{
+                background-color: var(--color-theme);
+            }
+
+            .section-rea .rea-text > .btn:hover .btn-text{
+                    color: var(--color-white);
+                }
+
+
+/* FLASH SALE */
+.section-flash {
+    background-color: var(--color-theme-dark);
+}
+
+.section-flash .container .flash-body{
+    display: flex;
+    justify-content: space-between;
     height: 26.125rem;
 }
 
-.section-rea .bar-color{
+.section-flash .bar-color{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 15.938rem;
+    height: 16rem;
     background-color: var(--color-theme);
+    color: var(--color-white);
 }
 
-.section-rea .rea-text{
-    width: 27.813rem;
-    font-family: var(--font-roboto);
-    font-size: var(--font-size-14);
-}
+    .section-flash .bar-color h1{
+        font-family: var(--font-play);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-60);
+        margin-bottom: 0;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .section-flash .bar-color p{
+        font-size: var(--font-size-24);
+        font-weight: var(--border-radius-medium);
+    }
+
+    .section-flash .flash-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-14);
+        color: var(--color-white);
+    }
+
+    .section-flash .flash-text .container-circle {
+        display: flex;
+    }
+    
+        .section-flash .flash-text .container-circle .flash-circle{
+            height: 6.813rem;
+            width: 6.813rem;
+            background-color: var(--color-gray-3);
+            color: var(--color-theme-dark);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            outline: 2px dotted var(--color-theme);
+        }
+
+            .section-flash .flash-text .container-circle .flash-circle span:nth-child(1){
+                font-family: var(--font-play);
+                color: var(--color-theme);
+                font-size: var(--font-size-36);
+                font-weight: var(--font-weight-bold);
+                line-height: 1;
+            }
+
+            .section-flash .flash-text .container-circle .flash-circle span:nth-child(2){
+                color: var(--color-theme-dark);
+                font-size: var(--font-size-16);
+            }
+
+    .section-flash .flash-text > .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-medium);
+        width: 9.625rem;
+        height: 3rem;
+        border: none;
+    }
+
+        .section-flash .flash-text > .btn > .btn-text{
+            color: var(--color-theme);
+            font-size: var(--font-size-18);
+            font-family: var(--font-roboto);
+            font-weight: var(--font-weight-medium);
+            margin: 0;
+            transition: color 250ms;
+        }
+        
+        .section-flash .flash-text > .btn:hover{
+            background-color: var(--color-theme);
+        }
+
+        .section-flash .flash-text > .btn:hover .btn-text{
+                color: var(--color-white);
+            }
+
+/* TOP SELLERS */
+.section-top-seller > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .section-top-seller .top-seller, .we-always-try, .zigzag{
+        text-align: center;
+        color: var(--color-theme-dark);
+    }
+
+    .section-top-seller .top-seller{
+        font-family: var(--font-play);
+        margin-bottom: -1rem;
+    }
+
+        .section-top-seller .top-seller #category{
+            color: var(--color-theme);
+        }
+
+    .top-seller-highlight{
+        display: flex;
+        justify-content: space-between;
+    }
+        /* DESIGN CHOICE, keep ratio of boxes due to container */
+        .top-seller-highlight .highlight-box{
+            width: 34.375rem;
+            height: 21.6rem;
+            background-color: var(--color-gray-1-1);
+            border-radius: var(--border-radius-small);
+            overflow: hidden;
+        }
+
+            .top-seller-highlight .highlight-box img{
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+        .top-seller-highlight .highlight-box-large{
+            height: 43.75rem;
+            width: 34.375rem;
+            background-color: var(--color-gray-1-1);
+            border-radius: var(--border-radius-small);
+            overflow: hidden;
+        }
+
+        .top-seller-highlight .container-highligt-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-seller-highlight .highlight-box-small {
+            height: 3.188rem;
+            width: 100%;
+            background-color: var(--color-dark-opacity);
+            color: var(--color-theme);
+            padding: 0.25rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .top-seller-highlight .highlight-box-small h1{
+            font-size: var(--font-size-18);
+            font-weight: var(--font-weight-regular);
+            color: var(--color-white);
+            margin: 0 1rem;
+            padding: 0;
+        }
+
+        #highlight-box-quick-menu {
+            background-color:#0e153dda;
+        }
+        
+        #highlight-box-quick-menu img {
+            position: relative;
+            z-index: -1;
+        }
+
+    .section-top-seller .height{
+        height: 9rem;
+    }
