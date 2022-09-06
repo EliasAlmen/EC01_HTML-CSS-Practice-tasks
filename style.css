@@ -32,6 +32,7 @@
     --border-radius-small: 8px;
     --border-radius-medium: 25px;
     --border-radius-rounded: 50%;
+    
 }
 
 /*----Taget från StackOverflow---- */
@@ -62,6 +63,18 @@ ul{
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--color-theme);
+}
+
+.instock{
+    color: var(--color-prod-instock);
+}
+
+.outofstock{
+    color: var(--color-prod-outofstock);
 }
 
 /* TOP MENU */
@@ -229,7 +242,7 @@ Testing flex properties to arrange items
 
 /* THE BIG BANNER */
 .banner{
-    display: none;
+    display: flex;
     background-color: var(--color-gray-1-1);
     height: 37.5rem;
 }
@@ -260,6 +273,7 @@ Testing flex properties to arrange items
             background-color: var(--color-gray-3);
             border-radius: var(--border-radius-medium);
             width: 9.75rem;
+            transition: 250ms;
             line-height: 3rem;
         }
 
@@ -268,6 +282,7 @@ Testing flex properties to arrange items
                 font-size: var(--font-size-18);
                 font-family: var(--font-roboto);
                 font-weight: var(--font-weight-medium);
+                transition: 250ms;
             }
             
             .banner .banner-shopping .shopping-shopnow:hover{
@@ -286,7 +301,7 @@ Testing flex properties to arrange items
 /* BOXES OF BROKEN PROMISES */
 .commitments{
     /* margin: 0 auto; */
-    display: none;
+    display: flex;
     height: 22.938rem;
     width: 105.063rem;
     justify-content: space-between;
@@ -338,7 +353,7 @@ Testing flex properties to arrange items
 
 /* SHOP BY CATEGORY */
 .section-shop > .container{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     }
@@ -423,7 +438,7 @@ Testing flex properties to arrange items
             transition: 250ms;
         }
 
-        .section-shop .grid .box .small-box:hover{
+        .section-shop .grid .box:hover  .small-box{
             height: 4.688rem;
         }
 
@@ -568,26 +583,18 @@ Testing flex properties to arrange items
             transition: top 250ms;
         }
 
-        .new-arrivals-highlight .highlight-box .highlight-box-tooltip{
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            right: 20%;
-        }
-
             .new-arrivals-highlight .highlight-box .highlight-box-menu li{
                 display: flex;
                 justify-content: center;
-                
             }
         
-            .new-arrivals-highlight .highlight-box .highlight-box-menu li a{
-                color: var(--color-gray-0);
-            }
-
-                .new-arrivals-highlight .highlight-box .highlight-box-menu li a:hover{
-                    color: var(--color-theme);
+                .new-arrivals-highlight .highlight-box .highlight-box-menu li a{
+                    color: var(--color-gray-0);
                 }
+
+                    .new-arrivals-highlight .highlight-box .highlight-box-menu li a:hover{
+                        color: var(--color-theme);
+                    }
 
             .new-arrivals-highlight .highlight-box:hover .highlight-box-menu{
                 top: 4%;
@@ -597,9 +604,7 @@ Testing flex properties to arrange items
         height: 9rem;
     }
 
-    .instock{
-        color: var(--color-prod-instock);
-    }
+
 
 /* REA REA REA */
 .section-rea {
@@ -607,7 +612,7 @@ Testing flex properties to arrange items
 }
 
     .section-rea .container .rea-body{
-        display: none;
+        display: flex;
         justify-content: space-between;
         height: 26.125rem;
     }
@@ -814,7 +819,7 @@ Testing flex properties to arrange items
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    }
+}
 
     .section-top-seller .top-seller, .we-always-try, .zigzag{
         text-align: center;
@@ -835,6 +840,134 @@ Testing flex properties to arrange items
         justify-content: space-between;
     }
         /* DESIGN CHOICE, keep ratio of boxes due to container */
+        .top-seller-highlight .highlight-box{
+            width: 34.375rem;
+            height: 21rem;
+            background-color: var(--color-gray-1-1);
+            border-radius: var(--border-radius-small);
+            overflow: hidden;
+            position: relative;
+        }
+
+        #box-large{
+            height: 43.2rem;
+            width: 34.375rem;
+        }
+        
+
+        .top-seller-highlight .highlight-box .highlight-box-small{
+            height: 51px;
+            width: 100%;
+            background-color: var(--color-theme-dark);
+            color: var(--color-theme);
+            padding: 0.25rem;
+            position: absolute;
+            bottom: 0;
+            transition: 250ms;
+        }
+
+            .top-seller-highlight .highlight-box .highlight-box-small h2{
+                font-size: var(--font-size-18);
+                font-weight: var(--font-weight-regular);
+                color: var(--color-white);
+                margin: 0.75rem;
+                transition: margin-top 250ms;
+            }
+
+            .top-seller-highlight .highlight-box .highlight-box-small h1, .top-seller-highlight .highlight-box .highlight-box-small p {
+                margin: 0.75rem;
+            }
+
+            .top-seller-highlight .highlight-box .highlight-box-small h1{
+                font-size: var(--font-size-24);
+                font-weight: var(--font-weight-medium);
+            }
+
+            .top-seller-highlight .highlight-box .highlight-box-small p{
+                color: var(--color-white);
+                text-decoration: line-through;
+            }
+
+                .top-seller-highlight .highlight-box:hover .highlight-box-small h2{
+                    margin-top: 32%;
+                }
+
+                #box-large:hover .highlight-box-small h2{
+                    margin-top: 97%;
+                }
+
+                .top-seller-highlight .highlight-box:hover .highlight-box-small {
+                    height: 100%;
+                    background-color: var(--color-dark-opacity);
+                }
+
+                .top-seller-highlight .highlight-box .highlight-box-small button{
+                    background-color: #00000000;
+                    color: var(--color-white);
+                    border: 1px solid var(--color-white);
+                    margin-left: 0.75rem;
+                }
+
+        .top-seller-highlight .highlight-box .highlight-box-menu{
+            position: absolute;
+            z-index: 1;
+            top: 101%;
+            right: 5%;
+            list-style: none;
+            margin: auto;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            border-radius: var(--border-radius-medium);
+            background-color: var(--color-white);
+            transition: top 250ms;
+        }
+
+            .top-seller-highlight .highlight-box .highlight-box-menu li{
+                display: flex;
+                justify-content: center;
+            }
+        
+                .top-seller-highlight .highlight-box .highlight-box-menu li a{
+                    color: var(--color-gray-0);
+                }
+
+                    .top-seller-highlight .highlight-box .highlight-box-menu li a:hover{
+                        color: var(--color-theme);
+                    }
+
+            .top-seller-highlight .highlight-box:hover .highlight-box-menu{
+                top: 4%;
+            }
+
+    .section-top-seller .height{
+        height: 9rem;
+    }
+
+/* .section-top-seller > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .section-top-seller .top-seller, .we-always-try, .zigzag{
+        text-align: center;
+        color: var(--color-theme-dark);
+    }
+
+    .section-top-seller .top-seller{
+        font-family: var(--font-play);
+        margin-bottom: -1rem;
+    }
+
+        .section-top-seller .top-seller #category{
+            color: var(--color-theme);
+        }
+
+    .top-seller-highlight{
+        display: flex;
+        justify-content: space-between;
+    }
+        DESIGN CHOICE, keep ratio of boxes due to container
         .top-seller-highlight .highlight-box{
             width: 34.375rem;
             height: 21.6rem;
@@ -881,8 +1014,4 @@ Testing flex properties to arrange items
             color: var(--color-white);
             margin: 0 1rem;
             padding: 0;
-        }
-
-    .section-top-seller .height{
-        height: 9rem;
-    }
+        } */
