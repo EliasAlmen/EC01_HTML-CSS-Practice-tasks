@@ -605,7 +605,6 @@ Testing flex properties to arrange items
     }
 
 
-
 /* REA REA REA */
 .section-rea {
     background-color: var(--color-gray-1);
@@ -942,76 +941,3 @@ Testing flex properties to arrange items
     .section-top-seller .height{
         height: 9rem;
     }
-
-/* .section-top-seller > .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    }
-
-    .section-top-seller .top-seller, .we-always-try, .zigzag{
-        text-align: center;
-        color: var(--color-theme-dark);
-    }
-
-    .section-top-seller .top-seller{
-        font-family: var(--font-play);
-        margin-bottom: -1rem;
-    }
-
-        .section-top-seller .top-seller #category{
-            color: var(--color-theme);
-        }
-
-    .top-seller-highlight{
-        display: flex;
-        justify-content: space-between;
-    }
-        DESIGN CHOICE, keep ratio of boxes due to container
-        .top-seller-highlight .highlight-box{
-            width: 34.375rem;
-            height: 21.6rem;
-            background-color: var(--color-gray-1-1);
-            border-radius: var(--border-radius-small);
-            overflow: hidden;
-        }
-
-            .top-seller-highlight .highlight-box img{
-                align-items: center;
-                justify-content: center;
-                align-content: center;
-            }
-
-        .top-seller-highlight .highlight-box-large{
-            height: 43.75rem;
-            width: 34.375rem;
-            background-color: var(--color-gray-1-1);
-            border-radius: var(--border-radius-small);
-            overflow: hidden;
-        }
-
-        .top-seller-highlight .container-highligt-box{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .top-seller-highlight .highlight-box-small {
-            height: 3.188rem;
-            width: 100%;
-            background-color: var(--color-dark-opacity);
-            color: var(--color-theme);
-            padding: 0.25rem;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .top-seller-highlight .highlight-box-small h1{
-            font-size: var(--font-size-18);
-            font-weight: var(--font-weight-regular);
-            color: var(--color-white);
-            margin: 0 1rem;
-            padding: 0;
-        } */
