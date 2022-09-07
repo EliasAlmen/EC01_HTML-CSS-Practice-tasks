@@ -428,7 +428,7 @@ Testing flex properties to arrange items
         .section-shop .grid .box .small-box{
             height: 2.375rem;
             width: 6.688rem;
-            background-color: var(--color-dark-opacity);
+            background-color: var(--color-theme-dark);
             color: var(--color-theme);
             border-radius: 0 var(--border-radius-small);
             padding: 0.25rem;
@@ -440,6 +440,7 @@ Testing flex properties to arrange items
 
         .section-shop .grid .box:hover  .small-box{
             height: 4.688rem;
+            background-color: var(--color-dark-opacity);
         }
 
         .section-shop .grid .box .small-box h1{
@@ -784,34 +785,36 @@ Testing flex properties to arrange items
                 font-size: var(--font-size-16);
             }
 
-    .section-flash .flash-text > .btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: var(--color-white);
-        border-radius: var(--border-radius-medium);
-        width: 9.625rem;
-        height: 3rem;
-        border: none;
-    }
-
-        .section-flash .flash-text > .btn > .btn-text{
-            color: var(--color-theme);
-            font-size: var(--font-size-18);
-            font-family: var(--font-roboto);
-            font-weight: var(--font-weight-medium);
-            margin: 0;
-            transition: color 250ms;
-        }
-        
-        .section-flash .flash-text > .btn:hover{
-            background-color: var(--color-theme);
-        }
-
-        .section-flash .flash-text > .btn:hover .btn-text{
-                color: var(--color-white);
+            .section-flash .flash-text > .btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--color-white);
+                border-radius: var(--border-radius-medium);
+                width: 9.625rem;
+                height: 3rem;
+                line-height: 0;
+                border: none;
             }
+    
+                .section-flash .flash-text > .btn > .btn-text{
+                    color: var(--color-theme);
+                    font-size: var(--font-size-18);
+                    font-family: var(--font-roboto);
+                    font-weight: var(--font-weight-medium);
+                    margin: 0;
+                    padding: 0;
+                    transition: color 250ms;
+                }
+                
+                .section-flash .flash-text > .btn:hover{
+                    background-color: var(--color-theme);
+                }
+    
+                .section-flash .flash-text > .btn:hover .btn-text{
+                        color: var(--color-white);
+                    }
+    
 
 /* TOP SELLERS */
 .section-top-seller > .container {
@@ -941,3 +944,38 @@ Testing flex properties to arrange items
     .section-top-seller .height{
         height: 9rem;
     }
+
+/* SUBSCRIBE NOW */
+
+.section-subscribe{
+    background-color: var(--color-gray-4);
+}
+
+    .section-subscribe .container{
+        height: 19.563rem;
+    }
+
+        .section-subscribe .subscribe-body{
+            height: 100%;
+            width: 50%;
+        }
+
+            .section-subscribe .subscribe-body, .we-always-try {
+                color: var(--color-theme-dark);
+            }
+        
+            .section-subscribe .subscribe-body h1{
+                font-family: var(--font-play);
+                margon
+            }
+
+        
+                .section-subscribe .subscribe-body #category{
+                    color: var(--color-theme);
+                }
+
+        .section-subscribe .subscribe-fill{
+            height: 100%;
+            width: 50%;
+            background-color: var(--color-gray-1);
+        }
