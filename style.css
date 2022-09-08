@@ -966,11 +966,9 @@ Testing flex properties to arrange items
         
             .section-subscribe .subscribe-body h1{
                 font-family: var(--font-play);
-                margon
+                
             }
-
-        
-                .section-subscribe .subscribe-body #category{
+                #category{
                     color: var(--color-theme);
                 }
 
@@ -979,3 +977,63 @@ Testing flex properties to arrange items
             width: 50%;
             background-color: var(--color-gray-1);
         }
+
+        .section-subscribe .subscribe-body .input-group{
+            width: 27.813rem;
+        }
+
+        .section-subscribe .subscribe-body .input-group .form-control{
+            height: 2.875rem;
+            font-size: var(--font-size-14);
+            font-weight: var(--font-weight-regular);
+            position: relative;
+        }
+
+        .section-subscribe .subscribe-body .input-group > .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-theme);
+            border-radius: var(--border-radius-medium);
+            width: 6.688rem;
+            height: 2.375rem;
+            line-height: 0;
+            border: none;
+            position: absolute;
+            left: 75.5%;
+            top: 10%;
+            z-index: 3;
+        }
+
+        .section-subscribe .subscribe-body .input-group > .btn > .btn-text{
+                color: var(--color-white);
+                font-size: var(--font-size-16);
+                font-weight: var(--font-weight-regular);
+                margin: 0;
+                padding: 0;
+                transition: color 250ms;
+            }
+            
+            .section-subscribe .subscribe-body .input-group > .btn:hover{
+                background-color: var(--color-theme-dark);
+            }
+
+            .section-subscribe .subscribe-body .input-group > .btn:hover .btn-text{
+                    color: var(--color-white);
+                }
+
+/* FOOTER */
+.section-footer .container-fluid{
+    background-color: var(--color-theme-dark);
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-footer .container-fluid p{
+    color: var(--color-white);
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size-16);
+}
