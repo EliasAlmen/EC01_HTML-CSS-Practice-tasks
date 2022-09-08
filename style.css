@@ -6,6 +6,7 @@
     --color-theme-light: #EDFCFA;
     --color-theme-dark: #0E153D;
     --color-dark: #080C24;
+    --color-half-dark: #50546E;
     --color-dark-opacity: #0e153dda;
     --color-white: #FFFFFF;
     --color-gray-0: #AAAAAA;
@@ -1031,9 +1032,68 @@ Testing flex properties to arrange items
     align-items: center;
 }
 
-.section-footer .container-fluid p{
+.section-footer .container p{
     color: var(--color-white);
     padding: 0;
     margin: 0;
     font-size: var(--font-size-16);
+}
+
+/* ACCOUNT.HTML */
+.breadcrumbs .container-fluid{
+    background-color: var(--color-half-dark);
+}
+
+    .breadcrumbs .container{
+        height: 8.75rem;
+    }
+
+        .breadcrumbs .container h1{
+            color: var(--color-theme);
+            font-size: var(--font-size-24);
+            font-weight: var(--font-weight-medium);
+            margin: 0;
+        }
+
+        .breadcrumbs .container .breadcrumb {
+            margin: 0;
+        }
+
+        .breadcrumbs .container .breadcrumb .breadcrumb-item{
+            color: var(--color-theme);
+            font-size: var(--font-size-16);
+            font-weight: var(--font-weight-regular);
+        }
+
+            .breadcrumbs .container .breadcrumb .breadcrumb-item:hover{
+                text-decoration: underline;
+            }
+
+            .breadcrumbs .container .breadcrumb li a {
+                text-decoration: none;
+                color: var(--color-white);
+            }
+
+/* FORMS */
+
+#login-email, #login-password, #login-submit{
+    width: 100%;
+    margin-bottom: 1.875rem;
+}
+
+.forms-section .row{
+    margin: 7.5rem 0; 
+}
+
+.forms-section .form-general{
+    background-color: var(--color-gray-4);
+    border-radius: var(--border-radius-small);
+}
+
+.forms-section .form-login{
+    height: 32.625rem;
+}
+
+.forms-section .form-register{
+    height: 48.125rem;
 }
