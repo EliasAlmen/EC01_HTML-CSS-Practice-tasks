@@ -54,23 +54,30 @@
     <!-- Account settings and brand logotype -->
     <header class="header">
         <div class="container">
-            <div class="header-nav">
-                <a href="index.html" class="header-logotype">
+            <div class="header-nav row ">
+                <a href="index.html" class="header-logotype col-3">
                     <img src="/images/brand-logo.svg" alt="Logotype">
                 </a>
-                <div class="header-account">
-                    <div class="header-user" id="header-user-myaccount">
+
+                <!-- SEARCH BAR -->
+                <div class="input-group col-md-auto">
+                    <input type="text" class="form-control" placeholder="Search products..." aria-label="Search products..." aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-regular fa-magnifying-glass"></i></button>
+                </div>
+
+                <div class="header-account col">
+                    <div class="header-user me-5" id="header-user-myaccount">
                         <a href="account.html" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-user me-3"></i>
+                            <i class="fa-regular fa-user me-2"></i>
                             My account
                         </a>
                     </div>
-                    <div class="header-user">
+                    <div class="header-user me-4">
                         <a href="#" class="header-nav-hover-dark">
                             <i class="fa-regular fa-heart"></i>
                         </a>
                     </div>
-                    <div class="header-user">
+                    <div class="header-user me-4">
                         <a href="#" class="header-nav-hover-dark position-relative">
                             <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill">
                                 0
@@ -79,7 +86,7 @@
                             <i class="fa-regular fa-shuffle"></i>
                         </a>
                     </div>
-                    <div class="header-user">
+                    <div class="header-user me-4">
                         <a href="#" class="header-nav-hover-dark position-relative">
                             <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill">
                                 0

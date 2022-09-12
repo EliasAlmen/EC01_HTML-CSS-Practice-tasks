@@ -78,7 +78,7 @@ ul{
     color: var(--color-prod-outofstock);
 }
 
-/* TOP MENU */
+/* TOP BAR */
 .navbar-custom{
     background: var(--color-theme);
 }
@@ -132,21 +132,14 @@ ul{
         font-size: var(--font-size-16);
     }
 
-/* 
-LOGO AND ACCOUNT LINKS
-Testing flex properties to arrange items
-*/
+/* Account settings and brand logotype */
 .header .header-nav{
     height: 6.563rem;
     align-items: center;
 }
-
-    /* .header .header-nav .header-logotype{
-            flex: 2.5; 
-    } */
-
+    /* SEARCH BAR START */
     .header .header-nav .input-group{
-        width: 34.5rem;
+        width: 20.5rem;
     }
 
     .header .header-nav .input-group .form-control, .btn{
@@ -161,8 +154,8 @@ Testing flex properties to arrange items
         border: none;
         width: 2.875rem;
         font-size: var(--font-size-18);
-
     }
+    /* SEARCH BAR END */
 
     .header .header-nav .header-account{
         display: flex;
@@ -254,7 +247,7 @@ Testing flex properties to arrange items
             font-size: var(--font-size-16);
         }
 
-/* THE BIG BANNER */
+/* BANNER - SHOPPING IS MORE FUN + PPL PICTURE */
 .banner{
     display: flex;
     background-color: var(--color-gray-1-1);
@@ -263,7 +256,7 @@ Testing flex properties to arrange items
 
 .banner > .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -310,12 +303,12 @@ Testing flex properties to arrange items
     
     .banner .banner-picture{
         max-height: 37.5rem;
+        display: none;
     }
 
 /* BOXES OF BROKEN PROMISES */
 .commitments{
-    /* margin: 0 auto; */
-    display: flex;
+    display: none;
     height: 22.938rem;
     width: 105.063rem;
     justify-content: space-between;
@@ -367,7 +360,7 @@ Testing flex properties to arrange items
 
 /* SHOP BY CATEGORY */
 .section-shop > .container{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     }
@@ -1171,3 +1164,49 @@ Testing flex properties to arrange items
 .forms-section .form-register{
     height: fit-content;
 }
+
+/* MEDIA QUERY CUSTOM */
+@media (min-width: 1680px) {
+
+    .commitments{
+        display: flex;
+    }
+
+    .section-shop > .container{
+        display: flex;
+    }
+    
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) { 
+    .header .header-nav .input-group{
+        display: none;
+    }
+
+    .header .header-nav .header-account{
+        justify-content: center;
+    }
+ }
+
+@media (min-width: 1200px) { 
+    .banner .banner-picture{
+        display: flex;
+    }
+
+    .banner > .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .header-nav .input-group{
+        width: 24.5rem;
+    }
+ }
+
+ @media (min-width: 1400px) { 
+    .header .header-nav .input-group{
+        width: 34.5rem;
+    }
+ }
