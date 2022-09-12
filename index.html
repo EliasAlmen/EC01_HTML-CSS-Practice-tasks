@@ -54,34 +54,45 @@
     <!-- Account settings and brand logotype -->
     <header class="header">
         <div class="container">
-            <div class="header-nav">
-                <a href="index.html" class="header-logotype">
+            <div class="header-nav row ">
+                <a href="index.html" class="header-logotype col-3">
                     <img src="/images/brand-logo.svg" alt="Logotype">
                 </a>
-                <div class="header-account">
-                    <div class="header-user" id="header-user-myaccount">
+
+                <!-- SEARCH BAR -->
+                <div class="input-group col-md-auto">
+                    <input type="text" class="form-control" placeholder="Search products..." aria-label="Search products..." aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-regular fa-magnifying-glass"></i></button>
+                </div>
+
+                <div class="header-account col">
+                    <div class="header-user me-5" id="header-user-myaccount">
                         <a href="account.html" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-user fa-hover-hidden me-3"></i>
-                            <i class="fa-solid fa-user fa-hover-show me-3"></i>
+                            <i class="fa-regular fa-user me-2"></i>
                             My account
                         </a>
                     </div>
-                    <div class="header-user">
+                    <div class="header-user me-4">
                         <a href="#" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-heart fa-hover-hidden"></i>
-                            <i class="fa-solid fa-heart fa-hover-show"></i>
+                            <i class="fa-regular fa-heart"></i>
                         </a>
                     </div>
-                    <div class="header-user">
-                        <a href="#" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-shuffle fa-hover-hidden"></i>
-                            <i class="fa-solid fa-shuffle fa-hover-show"></i>
+                    <div class="header-user me-4">
+                        <a href="#" class="header-nav-hover-dark position-relative">
+                            <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill">
+                                0
+                                <span class="visually-hidden">Shuffle</span>
+                            </span>
+                            <i class="fa-regular fa-shuffle"></i>
                         </a>
                     </div>
-                    <div class="header-user">
-                        <a href="#" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-cart-shopping fa-hover-hidden"></i>
-                            <i class="fa-solid fa-cart-shopping fa-hover-show"></i>
+                    <div class="header-user me-4">
+                        <a href="#" class="header-nav-hover-dark position-relative">
+                            <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill">
+                                0
+                                <span class="visually-hidden">Items</span>
+                            </span>
+                            <i class="fa-regular fa-cart-shopping"></i>
                         </a>
                     </div>
                     <div class="header-user">

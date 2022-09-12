@@ -100,6 +100,7 @@ ul{
         background-color: var(--color-theme);
         color: var(--color-white);
         border: none;
+        padding: 0;
     }
 
         .navbar-custom .navbar-nav .dropdown-theme button:hover{
@@ -136,37 +137,49 @@ LOGO AND ACCOUNT LINKS
 Testing flex properties to arrange items
 */
 .header .header-nav{
-    display: flex;
     height: 6.563rem;
-    justify-content: space-between;
     align-items: center;
 }
 
-    .header .header-nav .header-logotype{
-        flex: 2.5;
+    /* .header .header-nav .header-logotype{
+            flex: 2.5; 
+    } */
+
+    .header .header-nav .input-group{
+        width: 34.5rem;
+    }
+
+    .header .header-nav .input-group .form-control, .btn{
+        border-radius: var(--border-radius-medium);
+        font-size: var(--font-size-14);
+        height: 2.875rem;
+    }
+
+    .header .header-nav .input-group button{
+        background-color: var(--color-theme);
+        color: var(--color-white);
+        border: none;
+        width: 2.875rem;
+        font-size: var(--font-size-18);
+
     }
 
     .header .header-nav .header-account{
         display: flex;
-        justify-content: space-between;
-        flex: 1;
+        justify-content: flex-end;
     }
 
-        .header .header-nav .header-account .header-user{
-            flex: 0.1;
-        }
-
-            .header .header-nav .header-account .header-user > a{
-                color: var(--color-theme-dark);
-            }
-
-        .header .header-nav .header-account .header-user .header-nav-hover-dark:hover{
+        .header .header-nav .header-account .header-user > a{
             color: var(--color-theme-dark);
         }
 
-#header-user-myaccount{
-    flex: 0.5;
-}
+        .header .header-nav .header-account .header-user .badge{
+            background-color: var(--color-theme);
+        }
+
+    .header .header-nav .header-account .header-user .header-nav-hover-dark:hover{
+        color: var(--color-theme);
+    }
 
 
 /* BROWSE OCH SPECIAL OFFER */
@@ -1076,9 +1089,35 @@ Testing flex properties to arrange items
 
 /* FORMS */
 
-#login-email, #login-password, #login-submit{
+#login-email, #login-password, #login-submit, #fname, #lname{
     width: 100%;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.5rem;
+}
+
+#login-email, #login-password, #fname, #lname{
+    border: none;
+    border-radius: var(--border-radius-small);
+    height: 2.625rem;
+    
+}
+
+#login-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.25rem;
+    border-radius: var(--border-radius-medium);
+    border: none;
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-medium);
+    transition: 250ms;
+}
+
+#login-submit:hover{
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
 }
 
 .forms-section .row{
@@ -1090,10 +1129,45 @@ Testing flex properties to arrange items
     border-radius: var(--border-radius-small);
 }
 
+    .forms-section .form-general .asterix, .terms-link {
+        color: var(--color-theme);
+    }
+
+    .forms-section .form-general .form-title{
+        font-size: var(--font-size-24);
+        font-weight: var(--font-weight-medium);
+        margin-bottom: 1.75rem;
+        color: var(--color-theme-dark);
+    }
+
+    .forms-section .form-general .text-muted, .terms-link{
+        font-size: var(--font-size-14);
+    }
+
+    .forms-section .form-general .login-with{
+        font-weight: var(--font-weight-medium);
+        color: var(--color-theme-dark);
+        
+    }
+
+    .forms-section .form-general .form-help a{
+        text-decoration: none;
+        color: var(--color-theme);
+    }
+
+        .forms-section .form-general .form-help a:hover{
+            text-decoration: underline;
+        }
+
+    .forms-section .form-general .terms-link:hover{
+        text-decoration: underline;
+    }
+
+
 .forms-section .form-login{
-    height: 32.625rem;
+    height: fit-content;
 }
 
 .forms-section .form-register{
-    height: 48.125rem;
+    height: fit-content;
 }

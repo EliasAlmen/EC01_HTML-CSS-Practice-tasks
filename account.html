@@ -61,27 +61,31 @@
                 <div class="header-account">
                     <div class="header-user" id="header-user-myaccount">
                         <a href="account.html" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-user fa-hover-hidden me-3"></i>
-                            <i class="fa-solid fa-user fa-hover-show me-3"></i>
+                            <i class="fa-regular fa-user me-3"></i>
                             My account
                         </a>
                     </div>
                     <div class="header-user">
                         <a href="#" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-heart fa-hover-hidden"></i>
-                            <i class="fa-solid fa-heart fa-hover-show"></i>
+                            <i class="fa-regular fa-heart"></i>
                         </a>
                     </div>
                     <div class="header-user">
-                        <a href="#" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-shuffle fa-hover-hidden"></i>
-                            <i class="fa-solid fa-shuffle fa-hover-show"></i>
+                        <a href="#" class="header-nav-hover-dark position-relative">
+                            <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill">
+                                0
+                                <span class="visually-hidden">Shuffle</span>
+                            </span>
+                            <i class="fa-regular fa-shuffle"></i>
                         </a>
                     </div>
                     <div class="header-user">
-                        <a href="#" class="header-nav-hover-dark">
-                            <i class="fa-regular fa-cart-shopping fa-hover-hidden"></i>
-                            <i class="fa-solid fa-cart-shopping fa-hover-show"></i>
+                        <a href="#" class="header-nav-hover-dark position-relative">
+                            <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill">
+                                0
+                                <span class="visually-hidden">Items</span>
+                            </span>
+                            <i class="fa-regular fa-cart-shopping"></i>
                         </a>
                     </div>
                     <div class="header-user">
@@ -137,13 +141,13 @@
         <div class="container">
             <div class="row gap-5">
                 <div class="form-general form-login col p-4">
-                    <form method="post">
+                    <form>
                         <h1 class="form-title">
                             LOGIN
                         </h1>
-                        <label for="login-email">Email address*</label>
+                        <label for="login-email" class="form-label">Email address<span class="asterix"> *</span></label>
                         <input type="email" name="" id="login-email">
-                        <label for="login-password">Password*</label>
+                        <label for="login-password" class="form-label">Password<span class="asterix"> *</span></label>
                         <input type="password" name="" id="login-password">
                         <input type="submit" value="LOG IN" id="login-submit">
                         <div class="form-help d-flex justify-content-between">
@@ -154,17 +158,33 @@
                             <div><a href="#" class="flex-fill lost-password">Lost your password?</a></div>
                         </div>
                     </form>
-                    <div class="login-with d-flex justify-content-evenly mt-5">
+                    <div class="login-with d-flex justify-content-between mt-4">
                         <img src="images/form-line.svg" alt="">
-                        <p class="mx-5 text-center p-0 m-0">OR LOG IN WITH</p>
+                        <p class="text-center p-0 m-0">OR LOG IN WITH</p>
                         <img src="images/form-line.svg" alt="">
-                        <div class="login-social">
-                            <a href=""></a>
-                            <a href=""></a>
-                        </div>
+                    </div>
+                    <div class="login-social d-flex justify-content-evenly mt-4">
+                        <a href="#"><img src="images/Login-facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="images/Login-google.svg" alt="Google"></a>
                     </div>
                 </div>
-                <div class="form-general form-register col p-3">
+                <div class="form-general form-register col p-4">
+                    <form>
+                        <h1 class="form-title">
+                            REGISTER
+                        </h1>
+                        <p class="text-muted lh-lg">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+                        <label for="fname" class="form-label">Firstname<span class="asterix"> *</span></label>
+                        <input type="text" name="fname" id="fname">
+                        <label for="lname" class="form-label">Lastname<span class="asterix"> *</span></label>
+                        <input type="text" name="lname" id="lname">
+                        <label for="login-email" class="form-label">Email address<span class="asterix"> *</span></label>
+                        <input type="email" name="" id="login-email">
+                        <label for="login-password" class="form-label">Password<span class="asterix"> *</span></label>
+                        <input type="password" name="" id="login-password">
+                        <p class="terms lh-lg">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span class="terms-link">privacy policy.</span></p>
+                        <input type="submit" value="REGISTER" id="login-submit" class="mb-0">
+                    </form>
                 </div>
             </div>
         </div>
