@@ -13,9 +13,9 @@
     <!-- TOP BAR -->
     <header class="navbar-custom">
         <div class="container">
-            <nav class="navbar-nav flex-row align-items-center">
+            <div class="navbar-nav flex-row align-items-center">
                 <div class="btn-languages me-auto">
-                    <div class="dropdown dropdown-theme me-3">
+                    <nav class="dropdown dropdown-theme me-3">
                         <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span id="language-eng">ENG<i class="fa-solid fa-chevron-down ms-3"></i></span>
                         </button>
@@ -23,8 +23,8 @@
                             <li><a class="dropdown-item" href="#">Eng</a></li>
                             <li><a class="dropdown-item" href="#">Sv</a></li>
                         </ul>
-                    </div>
-                    <div class="dropdown dropdown-theme me-3">
+                    </nav>
+                    <nav class="dropdown dropdown-theme me-3">
                         <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span id="language-eng">EUR<i class="fa-solid fa-chevron-down ms-3"></i></span>
                         </button>
@@ -33,39 +33,40 @@
                             <li><a class="dropdown-item" href="#">USD $</a></li>
                             <li><a class="dropdown-item" href="#">SEK kr</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-                <div class="me-5">
+                <nav class="me-5">
                     <a href="#" class="navbar-links me-4">Newletter</a>
                     <a href="#" class="navbar-links me-4">Contact us</a>
                     <a href="#" class="navbar-links">FAQs</a>
-                </div>
-                <div class="d-none d-lg-block">
+                </nav>
+                <nav class="d-none d-lg-block">
                     <a href="#" class="navbar-social"><i class="fa fa-facebook me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-twitter me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-instagram me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-pinterest me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Account settings and brand logotype -->
-    <header class="header">
+    <!-- Account settings, search bar and brand logotype -->
+    <nav class="header">
         <div class="container">
             <div class="header-nav row ">
+                <!-- BRAND LOGOTYPE -->
                 <a href="index.html" class="header-logotype col-3 d-none d-lg-block">
                     <img src="/images/brand-logo.svg" alt="Logotype">
                 </a>
 
                 <!-- SEARCH BAR -->
-                <div class="input-group col-md-auto">
+                <form class="input-group col-md-auto">
                     <input type="text" class="form-control" placeholder="Search products..." aria-label="Search products..." aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-regular fa-magnifying-glass"></i></button>
-                </div>
-                <!-- SEARCH BAR END -->
-                <div class="header-account col">
+                </form>
+                <!-- Account settings -->
+                <nav class="header-account col">
                     <div class="header-user me-5" id="header-user-myaccount">
                         <a href="account.html" class="header-nav-hover-dark">
                             <i class="fa-regular fa-user me-2"></i>
@@ -98,13 +99,13 @@
                     <div class="header-user">
                         <a href="#" class="header-nav-hover-dark">€9999.00</a>
                     </div>
-                </div>
+                </nav>
             </div>
         </div>
-    </header>
+    </nav>
 
    <!-- MENU FOR "browse categories" and "Special offer" -->
-    <section class="section">
+    <nav class="section">
         <div class="container">
             <div class="buttons-section">
                 <div class="browse-categories">
@@ -126,20 +127,20 @@
                 </div>
             </div>
         </div>
-    </section>
+    </nav>
 
     <!-- BANNER - SHOPPING IS MORE FUN + PPL PICTURE -->
     <section class="banner">
         <div class="container">
-            <div class="banner-shopping">
+            <article class="banner-shopping">
                 <h1>Shopping is 
                     <strong class="mb-4"><br>MORE FUN</strong>
                 </h1>
                 <p>Vivamus dignissim a ex eu ornare. Ut fermentum orci <br> vel diam ultricies faucibus. Quisque quis erat sed</p>
-                <div class="shopping-shopnow mt-5">
+                <nav class="shopping-shopnow mt-5">
                     <a href="#" class="shopnow-text">SHOP NOW</a>
-                 </div>
-            </div>
+                </nav>
+            </article>
             <div class="banner-picture">
                 <a href="#"><img src="/images/Banner-thumb.svg" alt="Banner-thumb"></a>
             </div>
@@ -147,7 +148,7 @@
     </section>
 
     <!-- BOXES OF BROKEN PROMISES -->
-    <section>
+    <aside>
         <ul class="commitments container-fluid mb-0">
             <li class="commit card">
                 <span class="card-icon">
@@ -186,11 +187,11 @@
                 </div>
             </li>
         </ul>
-    </section>
+    </aside>
 
     <!-- Shop by categories -->
     <section class="section-shop mb-5">
-        <div class="container">
+        <article class="container">
             <div class="shop-by-category">
                 <h1>
                     <strong>SHOP BY <span id="category">CATEGORY</span></strong>
@@ -207,7 +208,7 @@
 
             <!-- THE GRID -->
 
-            <div class="grid my-4">
+            <nav class="grid my-4">
                 <div id="category-box-1" class="box">
                     <div class="small-box">
                         <h1>Men</h1>
@@ -257,13 +258,13 @@
                     </div>
                     <img src="images/watches.jpg" alt="" class="grid-product-image">
                 </div>
-            </div>
-        </div>
+            </nav>
+        </article>
     </section>
 
     <!-- NEW ARRIVALS -->
     <section class="section-arrivals">
-        <div class="container">
+        <article class="container">
             <div class="new-arrivals mt-4">
                 <h1>
                     <strong>NEW <span id="category">ARRIVALS</span></strong>
@@ -337,11 +338,11 @@
                 </li>
             </ul>
             <div class="height"></div>
-        </div>
+        </article>
     </section>
 
     <!-- REA REA REA -->
-    <section class="section-rea">
+    <aside class="section-rea">
         <div class="container mb-5">
             <div class="rea-body">
                 <div class="bar-color">
@@ -361,7 +362,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </aside>
     
     <!-- FEATURED PRODUCTS -->
     <section class="section-arrivals">
@@ -443,7 +444,7 @@
     </section>
 
     <!-- Flash sale -->
-    <section class="section-flash">
+    <aside class="section-flash">
         <div class="container mb-5">
             <div class="flash-body">
                 <div class="bar-color">
@@ -451,24 +452,24 @@
                     <p class="mt-3 mb-4">UP TO 50% OFF</p>
                 </div>
                 <div class="flash-text">
-                    <div class="container-circle">
-                        <div class="flash-circle me-4">
+                    <ul class="container-circle">
+                        <li class="flash-circle me-4">
                             <span>7</span>
                             <span>Days</span>
-                        </div>
-                        <div class="flash-circle me-4">
+                        </li>
+                        <li class="flash-circle me-4">
                             <span>23</span>
                             <span>Hours</span>
-                        </div>
-                        <div class="flash-circle me-4">
+                        </li>
+                        <li class="flash-circle me-4">
                             <span>46</span>
                             <span>Minutes</span>
-                        </div>
+                        </li>
                         <div class="flash-circle">
                             <span>12</span>
                             <span>Seconds</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     <button class="btn mt-4 p-0">
                         <p class="btn-text">
                             LEARN MORE
@@ -477,11 +478,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </aside>
 
     <!-- Top sellers -->
     <section class="section-top-seller">
-        <div class="container">
+        <article class="container">
             <div class="top-seller mt-5">
                 <h1>
                     <strong>TOP <span id="category">SELLERS</span></strong>
@@ -558,34 +559,33 @@
                 </span>
             </ul>
             <div class="height"></div>
-        </div>
+        </article>
     </section>
 
     <!-- SUBSCRIBE NOW -->
-    <section class="section-subscribe">
+    <aside class="section-subscribe">
         <div class="container d-flex">
             <div class="subscribe-body d-flex flex-column justify-content-center">
                 <h1><strong>SUBSCRIBE <span id="category">NOW</span></strong></h1>
                 <p>Signup for awesome news about our new products and <br> know our special discounts on products.</p>
-                <div class="input-group mb-3">
+                <form class="input-group mb-3">
                     <input type="email" class="form-control rounded-pill" placeholder="Enter email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     <button class="btn rounded-pill" type="submit"><span class="btn-text">Subscribe</span></button>
-                </div>
+                </form>
             </div>
             <div class="subscribe-fill">
-
             </div>
         </div>
-    </section>
+    </aside>
 
     <!-- FOOTER -->
-    <section class="section-footer">
+    <footer class="section-footer">
         <div class="container-fluid">
             <div class="container">
                 <p>© Copyright 2022 Kenkata</p>
             </div>
         </div>
-    </section>
+    </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
