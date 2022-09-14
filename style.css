@@ -973,11 +973,11 @@ ul{
         }
 
         .section-subscribe .subscribe-body .input-group{
-            width: 27.813rem;
+            width: 70%;
         }
 
         .section-subscribe .subscribe-body .input-group .form-control{
-            height: 2.875rem;
+            height: 142%;
             font-size: var(--font-size-14);
             font-weight: var(--font-weight-regular);
             position: relative;
@@ -994,7 +994,7 @@ ul{
             line-height: 0;
             border: none;
             position: absolute;
-            left: 75.5%;
+            left: 76%;
             top: 10%;
             z-index: 3;
         }
@@ -1176,6 +1176,36 @@ ul{
     }
  }
 
+@media (max-width: 1400px){
+    .section-subscribe .subscribe-body .input-group > .btn{
+        left: 71.75%;
+    }
+}
+
+@media (max-width: 1200px){
+    .section-subscribe .subscribe-body .input-group > .btn{
+        left: 66.5%;
+    }
+}
+
+@media (max-width: 992px){
+    .section-subscribe .subscribe-body .input-group > .btn{
+        left: 55.25%;
+    }
+}
+
+@media (max-width: 768px){
+    .section-subscribe .subscribe-body .input-group{
+        display: block;
+    }
+}
+
+/* @media (min-width: 992) { 
+    .section-flash .flash-text .container-circle {
+        display: none;
+    }
+} */
+
 @media (min-width: 1200px) { 
     .banner .banner-picture{
         display: flex;
@@ -1190,10 +1220,11 @@ ul{
     .header .header-nav .input-group{
         width: 24.5rem;
     }
- }
+}
 
- @media (min-width: 1400px) { 
+@media (min-width: 1400px) { 
     .header .header-nav .input-group{
         width: 34.5rem;
     }
- }
+    
+}
