@@ -13,9 +13,9 @@
     <!-- TOP BAR -->
     <header class="navbar-custom">
         <div class="container">
-            <nav class="navbar-nav flex-row align-items-center">
+            <div class="navbar-nav flex-row align-items-center">
                 <div class="btn-languages me-auto">
-                    <div class="dropdown dropdown-theme me-3">
+                    <nav class="dropdown dropdown-theme me-3">
                         <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span id="language-eng">ENG<i class="fa-solid fa-chevron-down ms-3"></i></span>
                         </button>
@@ -23,8 +23,8 @@
                             <li><a class="dropdown-item" href="#">Eng</a></li>
                             <li><a class="dropdown-item" href="#">Sv</a></li>
                         </ul>
-                    </div>
-                    <div class="dropdown dropdown-theme me-3">
+                    </nav>
+                    <nav class="dropdown dropdown-theme me-3">
                         <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span id="language-eng">EUR<i class="fa-solid fa-chevron-down ms-3"></i></span>
                         </button>
@@ -33,39 +33,40 @@
                             <li><a class="dropdown-item" href="#">USD $</a></li>
                             <li><a class="dropdown-item" href="#">SEK kr</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-                <div class="me-5">
+                <nav class="me-5 d-none d-sm-flex">
                     <a href="#" class="navbar-links me-4">Newletter</a>
                     <a href="#" class="navbar-links me-4">Contact us</a>
                     <a href="#" class="navbar-links">FAQs</a>
-                </div>
-                <div>
+                </nav>
+                <nav class="d-none d-lg-block">
                     <a href="#" class="navbar-social"><i class="fa fa-facebook me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-twitter me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-instagram me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-pinterest me-3" aria-hidden="true"></i></a>
                     <a href="#" class="navbar-social"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Account settings and brand logotype -->
-    <header class="header">
+    <!-- Account settings, search bar and brand logotype -->
+    <nav class="header">
         <div class="container">
             <div class="header-nav row ">
-                <a href="index.html" class="header-logotype col-3">
+                <!-- BRAND LOGOTYPE -->
+                <a href="index.html" class="header-logotype col-3 d-none d-lg-block">
                     <img src="/images/brand-logo.svg" alt="Logotype">
                 </a>
 
                 <!-- SEARCH BAR -->
-                <div class="input-group col-md-auto">
+                <form class="input-group col-md-auto">
                     <input type="text" class="form-control" placeholder="Search products..." aria-label="Search products..." aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-regular fa-magnifying-glass"></i></button>
-                </div>
-
-                <div class="header-account col">
+                </form>
+                <!-- Account settings -->
+                <nav class="header-account col">
                     <div class="header-user me-5" id="header-user-myaccount">
                         <a href="account.html" class="header-nav-hover-dark">
                             <i class="fa-regular fa-user me-2"></i>
@@ -98,13 +99,13 @@
                     <div class="header-user">
                         <a href="#" class="header-nav-hover-dark">€9999.00</a>
                     </div>
-                </div>
+                </nav>
             </div>
         </div>
-    </header>
+    </nav>
 
    <!-- MENU FOR "browse categories" and "Special offer" -->
-    <section class="section">
+    <nav class="section">
         <div class="container">
             <div class="buttons-section">
                 <div class="browse-categories">
@@ -121,12 +122,12 @@
                         </ul>
                     </div>               
                 </div>
-                <div class="special-offer">
+                <div class="special-offer d-none d-sm-flex">
                     <button class="btn special-text">SPECIAL OFFER</button>
                 </div>
             </div>
         </div>
-    </section>
+    </nav>
 
     <!-- ACCOUNT BREADCRUMBS -->
     <section class="breadcrumbs">
@@ -153,14 +154,14 @@
                             LOGIN
                         </h1>
                         <label for="login-email" class="form-label">Email address<span class="asterix"> *</span></label>
-                        <input type="email" name="" id="login-email">
+                        <input type="email" name="" id="login-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                         <label for="login-password" class="form-label">Password<span class="asterix"> *</span></label>
                         <input type="password" name="" id="login-password">
                         <input type="submit" value="LOG IN" id="login-submit">
                         <div class="form-help d-flex justify-content-between">
                             <div>
                                 <input type="checkbox" name="" id="remember-me">
-                                <label for="remember-me">Remember me</label>
+                                <label for="remember-me" id="remember-me">Remember me</label>
                             </div>
                             <div><a href="#" class="flex-fill lost-password">Lost your password?</a></div>
                         </div>
@@ -170,7 +171,7 @@
                         <p class="text-center p-0 m-0">OR LOG IN WITH</p>
                         <img src="images/form-line.svg" alt="">
                     </div>
-                    <div class="login-social d-flex justify-content-evenly mt-4">
+                    <div class="login-social mt-4">
                         <a href="#"><img src="images/Login-facebook.svg" alt="Facebook"></a>
                         <a href="#"><img src="images/Login-google.svg" alt="Google"></a>
                     </div>
@@ -185,12 +186,12 @@
                         <input type="text" name="fname" id="fname">
                         <label for="lname" class="form-label">Lastname<span class="asterix"> *</span></label>
                         <input type="text" name="lname" id="lname">
-                        <label for="login-email" class="form-label">Email address<span class="asterix"> *</span></label>
-                        <input type="email" name="" id="login-email">
-                        <label for="login-password" class="form-label">Password<span class="asterix"> *</span></label>
-                        <input type="password" name="" id="login-password">
+                        <label for="register-email" class="form-label">Email address<span class="asterix"> *</span></label>
+                        <input type="email" name="" id="register-email">
+                        <label for="register-password" class="form-label">Password<span class="asterix"> *</span></label>
+                        <input type="password" name="" id="register-password">
                         <p class="terms lh-lg">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span class="terms-link">privacy policy.</span></p>
-                        <input type="submit" value="REGISTER" id="login-submit" class="mb-0">
+                        <input type="submit" value="REGISTER" id="register-submit" class="mb-0">
                     </form>
                 </div>
             </div>
