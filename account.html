@@ -149,27 +149,30 @@
         <div class="container">
             <div class="row gap-5">
                 <div class="form-general form-login col p-4">
-                    <form>
+                    <form class="needs-validation was-validated" novalidate>
                         <h1 class="form-title">
                             LOGIN
                         </h1>
                         <label for="login-email" class="form-label">Email address<span class="asterix"> *</span></label>
-                        <input type="email" name="" id="login-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input type="email" id="login-email" autocomplete="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                         <label for="login-password" class="form-label">Password<span class="asterix"> *</span></label>
-                        <input type="password" name="" id="login-password">
+                        <input type="password" id="login-password" required>
                         <input type="submit" value="LOG IN" id="login-submit">
                         <div class="form-help d-flex justify-content-between">
-                            <div>
-                                <input type="checkbox" name="" id="remember-me">
-                                <label for="remember-me" id="remember-me">Remember me</label>
+                            <div class="d-flex">
+                                <input type="checkbox" id="remember-me">
+                                <label class="ms-2" for="remember-me" id="remember-lable">Remember me</label>
                             </div>
                             <div><a href="#" class="flex-fill lost-password">Lost your password?</a></div>
                         </div>
                     </form>
-                    <div class="login-with d-flex justify-content-between mt-4">
-                        <img src="images/form-line.svg" alt="">
+                    <div class="login-with d-flex justify-content-evenly mt-4">
+                        <img class="d-none d-sm-flex" src="images/form-line.svg" alt="">
                         <p class="text-center p-0 m-0">OR LOG IN WITH</p>
-                        <img src="images/form-line.svg" alt="">
+                        <img class="d-none d-sm-flex" src="images/form-line.svg" alt="">
                     </div>
                     <div class="login-social mt-4">
                         <a href="#"><img src="images/Login-facebook.svg" alt="Facebook"></a>
@@ -177,19 +180,28 @@
                     </div>
                 </div>
                 <div class="form-general form-register col p-4">
-                    <form>
+                    <form class="needs-validation was-validated" novalidate>
                         <h1 class="form-title">
                             REGISTER
                         </h1>
                         <p class="text-muted lh-lg">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
                         <label for="fname" class="form-label">Firstname<span class="asterix"> *</span></label>
-                        <input type="text" name="fname" id="fname">
+                        <input type="text" name="fname" id="fname" autocomplete="name" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                         <label for="lname" class="form-label">Lastname<span class="asterix"> *</span></label>
-                        <input type="text" name="lname" id="lname">
+                        <input type="text" name="lname" id="lname" autocomplete="family-name" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                         <label for="register-email" class="form-label">Email address<span class="asterix"> *</span></label>
-                        <input type="email" name="" id="register-email">
+                        <input type="email" name="register-email" id="register-email" autocomplete="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                         <label for="register-password" class="form-label">Password<span class="asterix"> *</span></label>
-                        <input type="password" name="" id="register-password">
+                        <input type="password" name="register-password" id="register-password" required>
                         <p class="terms lh-lg">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span class="terms-link">privacy policy.</span></p>
                         <input type="submit" value="REGISTER" id="register-submit" class="mb-0">
                     </form>
