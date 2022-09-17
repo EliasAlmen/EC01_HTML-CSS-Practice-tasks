@@ -149,7 +149,7 @@
         <div class="container">
             <div class="row gap-5">
                 <div class="form-general form-login col p-4">
-                    <form class="needs-validation was-validated" novalidate>
+                    <form class="needs-validation" novalidate>
                         <h1 class="form-title">
                             LOGIN
                         </h1>
@@ -158,9 +158,12 @@
                         <div class="valid-feedback">
                             Looks good!
                         </div>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
                         <label for="login-password" class="form-label">Password<span class="asterix"> *</span></label>
                         <input type="password" id="login-password" required>
-                        <input type="submit" value="LOG IN" id="login-submit">
+                        <input class="my-4" type="submit" value="LOG IN" id="login-submit">
                         <div class="form-help d-flex justify-content-between">
                             <div class="d-flex">
                                 <input type="checkbox" id="remember-me">
@@ -180,7 +183,7 @@
                     </div>
                 </div>
                 <div class="form-general form-register col p-4">
-                    <form class="needs-validation was-validated" novalidate>
+                    <form class="needs-validation" novalidate>
                         <h1 class="form-title">
                             REGISTER
                         </h1>
@@ -190,19 +193,28 @@
                         <div class="valid-feedback">
                             Looks good!
                         </div>
+                        <div class="invalid-feedback">
+                            Are you sure?
+                        </div>
                         <label for="lname" class="form-label">Lastname<span class="asterix"> *</span></label>
-                        <input type="text" name="lname" id="lname" autocomplete="family-name" required>
+                        <input type="text" name="lname" id="lname" autocomplete="family-name"required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
+                        <div class="invalid-feedback">
+                            Are you sure?
+                        </div>
                         <label for="register-email" class="form-label">Email address<span class="asterix"> *</span></label>
-                        <input type="email" name="register-email" id="register-email" autocomplete="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        <input type="email" name="register-email" id="register-email" autocomplete="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><!--patterns found at stackoverflow-->
                         <div class="valid-feedback">
                             Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
                         </div>
                         <label for="register-password" class="form-label">Password<span class="asterix"> *</span></label>
                         <input type="password" name="register-password" id="register-password" required>
-                        <p class="terms lh-lg">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span class="terms-link">privacy policy.</span></p>
+                        <p class="terms mt-4 lh-lg">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span class="terms-link">privacy policy.</span></p>
                         <input type="submit" value="REGISTER" id="register-submit" class="mb-0">
                     </form>
                 </div>
@@ -219,11 +231,36 @@
         </div>
     </section>
 
-
+<!-- BOOTSTRAP JAVASCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<!-- FOR TOOLTIPS -->
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
+<!-- FOR VALIDATION -->
+<script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+    })()
 </script>
 </body>
 </html>

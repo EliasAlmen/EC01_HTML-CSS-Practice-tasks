@@ -1119,8 +1119,8 @@ ul{
     border-radius: var(--border-radius-small);
 }
 
-    .forms-section .form-general form label:not(:first-child){
-        margin-top: 1.5rem;
+    .forms-section .form-general form label:not(:first-of-type){
+        margin-top: 1.75rem;
     }
 
     .forms-section .form-general .asterix, .terms-link {
