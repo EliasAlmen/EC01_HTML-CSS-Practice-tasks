@@ -71,7 +71,7 @@ ul{
     background: var(--color-theme);
 }
 
-    .navbar-custom > .container{
+    .navbar-custom .container{
         height: 2.5rem;
     }
 
@@ -84,69 +84,66 @@ ul{
             display: flex;
         }
 
-    .navbar-custom .navbar-nav .dropdown-theme button{
-        background-color: var(--color-theme);
-        color: var(--color-white);
-        border: none;
-        padding: 0;
-    }
-
-        .navbar-custom .navbar-nav .dropdown-theme button:hover{
-            color: var(--color-theme-dark);
-        }
-
-        .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu{
-            background-color: var(--color-theme-dark);
-            color: var(--color-white);
-        }
-    
-            .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu .dropdown-item{
+            .navbar-custom .navbar-nav .dropdown-theme button{
+                background-color: var(--color-theme);
                 color: var(--color-white);
+                border: none;
+                padding: 0;
             }
-            
-                .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu .dropdown-item:hover{
-                    background-color: var(--color-theme);
+
+                .navbar-custom .navbar-nav .dropdown-theme button:hover{
+                    color: var(--color-theme-dark);
                 }
 
-    .navbar-custom .navbar-nav .navbar-links, .navbar-custom .navbar-nav .navbar-social{
-        color: var(--color-white);
-    }
+            .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu{
+                background-color: var(--color-theme-dark);
+                color: var(--color-white);
+            }
+    
+                .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu .dropdown-item{
+                    color: var(--color-white);
+                }
+                
+                    .navbar-custom .navbar-nav .dropdown-theme .dropdown-menu .dropdown-item:hover{
+                        background-color: var(--color-theme);
+                    }
 
-        .navbar-custom .navbar-nav .navbar-links:hover, .navbar-custom .navbar-nav .navbar-social:hover{
-            color: var(--color-theme-dark);
+        .navbar-custom .navbar-nav .navbar-links, .navbar-custom .navbar-nav .navbar-social{
+            color: var(--color-white);
         }
 
-    .navbar-custom .navbar-nav .navbar-social{
-        font-size: var(--font-size-16);
-    }
+            .navbar-custom .navbar-nav .navbar-links:hover, .navbar-custom .navbar-nav .navbar-social:hover{
+                color: var(--color-theme-dark);
+            }
 
 /* Account settings and brand logotype */
 .header .header-nav{
     height: 6.563rem;
     align-items: center;
 }
-    /* SEARCH BAR START */
+    /* Search bar */
     .header .header-nav .input-group{
         width: 20.5rem;
     }
 
-    .header .header-nav .input-group .form-control, .btn{
-        border-radius: var(--border-radius-medium);
-        font-size: var(--font-size-14);
-        height: 2.875rem;
-    }
+            .header .header-nav .input-group .form-control, .btn{
+                border-radius: var(--border-radius-medium);
+                font-size: var(--font-size-14);
+                height: 2.875rem;
+            }
 
-    .header .header-nav .input-group button:hover{
-        background-color: var(--color-theme-dark);
-    }
+        .header .header-nav .input-group button{
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            border: none;
+            width: 2.875rem;
+            font-size: var(--font-size-18);
+        }
 
-    .header .header-nav .input-group button{
-        background-color: var(--color-theme);
-        color: var(--color-white);
-        border: none;
-        width: 2.875rem;
-        font-size: var(--font-size-18);
-    }
+            .header .header-nav .input-group button:hover{
+                background-color: var(--color-theme-dark);
+            }
+    /* Search bar end */
 
     .header .header-nav .header-account{
         display: flex;
@@ -161,12 +158,12 @@ ul{
             background-color: var(--color-theme);
         }
 
-    .header .header-nav .header-account .header-user .header-nav-hover-dark:hover{
-        color: var(--color-theme);
-    }
+        .header .header-nav .header-account .header-user .header-nav-hover-dark:hover{
+            color: var(--color-theme);
+        }
 
 
-/* MENU FOR "browse categories" and "Special offer" */
+/* Menu for "browse categories" and "Special offer" */
 .section {
     height: 3.188rem;
     border-top: 0.063rem solid var(--color-gray-2);
@@ -205,40 +202,37 @@ ul{
                 color: var(--color-white);
             }
 
-            .section .buttons-section .browse-categories .dropdown .dropdown-menu .dropdown-item {
-                background-color: var(--color-theme-dark);
-                color: var(--color-white);
-            }
-
-                .section .buttons-section .browse-categories .dropdown .dropdown-menu .dropdown-item:hover{
-                    background-color: var(--color-theme);
+                .section .buttons-section .browse-categories .dropdown .dropdown-menu .dropdown-item {
+                    background-color: var(--color-theme-dark);
+                    color: var(--color-white);
                 }
 
-                
+                    .section .buttons-section .browse-categories .dropdown .dropdown-menu .dropdown-item:hover{
+                        background-color: var(--color-theme);
+                    }
 
-    .section .buttons-section .special-offer button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--color-theme);
-        border-radius: var(--border-radius-medium);
-        width: 9.75rem;
-        /* line-height: 2.313rem; */
-        border: none;
-    }
-
-        .section .buttons-section .special-offer button:hover{
-            background-color: var(--color-theme-dark);
+        .section .buttons-section .special-offer button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-theme);
+            border-radius: var(--border-radius-medium);
+            width: 9.75rem;
+            border: none;
         }
 
-        .section .buttons-section .special-offer .special-text{
-            color: var(--color-white);
-            font-family: var(--font-roboto);
-            font-weight: var(--font-weight-medium);
-            font-size: var(--font-size-16);
-        }
+            .section .buttons-section .special-offer button:hover{
+                background-color: var(--color-theme-dark);
+            }
 
-/* BANNER - SHOPPING IS MORE FUN + PPL PICTURE */
+            .section .buttons-section .special-offer .special-text{
+                color: var(--color-white);
+                font-family: var(--font-roboto);
+                font-weight: var(--font-weight-medium);
+                font-size: var(--font-size-16);
+            }
+
+/* Banner - shopping is more fun + ppl picture */
 .banner{
     display: flex;
     background-color: var(--color-gray-1-1);
@@ -258,15 +252,15 @@ ul{
         text-align: center;
     }
 
-        .banner .banner-shopping strong{
-            color: var(--color-theme);
-            font-weight: var(--font-weight-bold);
-        }
+    .banner .banner-shopping strong{
+        color: var(--color-theme);
+        font-weight: var(--font-weight-bold);
+    }
 
-        .banner .banner-shopping p{
-            color: var(--color-theme-dark);
-            text-align: center;
-        }
+    .banner .banner-shopping p{
+        color: var(--color-theme-dark);
+        text-align: center;
+    }
 
         .banner .banner-shopping .shopping-shopnow{
             text-align: center;
@@ -300,7 +294,7 @@ ul{
         display: none;
     }
 
-/* BOXES OF BROKEN PROMISES */
+/* Boxes of broken promises */
 .commitments{
     display: flex;
     height: 22.938rem;
@@ -353,7 +347,7 @@ ul{
             color: var(--color-theme);
         }
 
-/* SHOP BY CATEGORY */
+/* Shop by categories */
 .section-shop > .container{
     display: flex;
     flex-direction: column;
@@ -375,7 +369,7 @@ ul{
             color: var(--color-theme);
         }
 
-        /* THE GRID */
+        /* The grid */
         .section-shop .grid{
             display: grid;
             align-items: stretch;
@@ -385,23 +379,22 @@ ul{
             gap: 0.625rem;
         }
 
-        .section-shop .grid .box{
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
-            /* background-color: var(--color-gray-1); */
-            border-radius: var(--border-radius-small);
-            overflow: hidden;
-            position: relative;
-        }
-
-            .section-shop .grid .box .grid-product-image{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                z-index: -1;
+            .section-shop .grid .box{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                border-radius: var(--border-radius-small);
+                overflow: hidden;
+                position: relative;
             }
+
+                .section-shop .grid .box .grid-product-image{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    z-index: -1;
+                }
 
         #category-box-1 { 
             grid-column: 1/2;
@@ -417,8 +410,8 @@ ul{
             grid-column: 1/3;
             grid-row: 2/4;
         }
+        /* I assume this box (hats) auto-sizes due to all the other properties, that the standard size is 1row1column */
         /* #category-box-5 { 
-            grid-column: ;
         } */
         #category-box-6 { 
             grid-column: 3/5;
@@ -440,26 +433,26 @@ ul{
             transition: 250ms;
         }
 
-        .section-shop .grid .box:hover  .small-box{
-            height: 4.688rem;
-            background-color: var(--color-dark-opacity);
-        }
+            .section-shop .grid .box:hover .small-box{
+                height: 4.688rem;
+                background-color: var(--color-dark-opacity);
+            }
 
-        .section-shop .grid .box .small-box h1{
-            font-size: var(--font-size-16);
-            font-weight: var(--font-weight-medium);
-            margin: 0.5rem;
-            padding: 0;
-        }
+            .section-shop .grid .box .small-box h1{
+                font-size: var(--font-size-16);
+                font-weight: var(--font-weight-medium);
+                margin: 0.5rem;
+                padding: 0;
+            }
 
-        .section-shop .grid .box .small-box p{
-            color: var(--color-white);
-            margin: 0 0.5rem;
-            font-size: var(--font-size-14);
-            font-family: var(--font-weight-regular);
-        }
+            .section-shop .grid .box .small-box p{
+                color: var(--color-white);
+                margin: 0 0.5rem;
+                font-size: var(--font-size-14);
+                font-family: var(--font-weight-regular);
+            }
 
-            /* SPECIAL LENGHT BOXES */
+            /* Special "long" lenght for small-box :hover, women kids shoes sunglasses */
             #category-box-2 div{
                 width: 16.5rem;
             }
@@ -476,7 +469,7 @@ ul{
                 width: 16.5rem;
             }
 
-/* NEW ARRIVALS + FEATURED PRODUCTS */
+/* New arrivals + featured products */
     .section-arrivals > .container {
     display: flex;
     flex-direction: column;
@@ -502,7 +495,7 @@ ul{
         justify-content: space-between;
         gap: 0.5rem;
     }
-        /* DESIGN CHOICE, keep ratio of boxes due to container */
+        /* Design choice, keep ratio of boxes due to container */
         .new-arrivals-highlight .highlight-box{
             height: 25rem;
             max-width: 21.875rem;
